@@ -105,7 +105,7 @@
                 <Font size="11.0" />
             </font>
         </Label>
-        <Label fx:id="lblPasswordAlert" layoutX="337.0" layoutY="345.0" textFill="RED">
+        <Label fx:id="lblPasswordAlert" layoutX="336.0" layoutY="345.0" textFill="RED">
             <font>
                 <Font size="11.0" />
             </font>
