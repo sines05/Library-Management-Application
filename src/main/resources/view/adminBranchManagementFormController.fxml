@@ -49,10 +49,9 @@
                 </HBox>
                 <ScrollPane layoutX="21.0" layoutY="75.0" prefHeight="463.0" prefWidth="888.0" style="-fx-background-color: white;">
                     <content>
-                        <VBox fx:id="vBoxBranchManage" prefHeight="454.0" prefWidth="864.0" style="-fx-background-color: white;" />
+                        <VBox fx:id="vBoxBranchManage" prefHeight="454.0" prefWidth="888.0" style="-fx-background-color: white;" />
                     </content>
                 </ScrollPane>
-                <Pane layoutX="886.0" layoutY="75.0" prefHeight="463.0" prefWidth="22.0" style="-fx-background-color: white;" />
             </children>
         </Pane>
         <Pane fx:id="searchPane" layoutX="628.0" layoutY="32.0" prefHeight="46.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 12;">
@@ -67,7 +66,6 @@
                         <Font size="16.0" />
                     </font>
                 </TextField>
-                <JFXButton layoutX="60.0" layoutY="1.0" onAction="#btnAddBranchOnAction" onMouseEntered="#btnAddBranchOnMouseEntered" onMouseExited="#btnAddBranchOnMouseExited" prefHeight="44.0" prefWidth="192.0" style="-fx-background-radius: 12;" text=" " />
             </children>
         </Pane>
         <Text layoutX="37.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Branch Management">
@@ -87,6 +85,7 @@
                         <Image url="@../assests/icon/addIconWhite.png" />
                     </image>
                 </ImageView>
+                <JFXButton layoutX="-18.0" onAction="#btnAddBranchOnAction" onMouseEntered="#btnAddBranchOnMouseEntered" onMouseExited="#btnAddBranchOnMouseExited" prefHeight="44.0" prefWidth="160.0" style="-fx-background-radius: 12;" text=" " />
             </children>
         </Pane>
         <Label fx:id="lblSearchAlert" layoutX="611.0" layoutY="71.0" prefHeight="16.0" prefWidth="3.0" textFill="RED">
