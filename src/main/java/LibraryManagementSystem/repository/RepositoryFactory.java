@@ -1,6 +1,6 @@
 package LibraryManagementSystem.repository;
 
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.impl.*;
+import LibraryManagementSystem.repository.custom.impl.*;
 
 public class RepositoryFactory {
 

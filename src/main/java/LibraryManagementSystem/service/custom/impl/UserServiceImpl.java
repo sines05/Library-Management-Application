@@ -1,16 +1,16 @@
 package LibraryManagementSystem.service.custom.impl;
 
-import lk.ijse.bookWormLibraryManagementSystem.dto.AdminDto;
-import lk.ijse.bookWormLibraryManagementSystem.dto.UserDto;
-import lk.ijse.bookWormLibraryManagementSystem.entity.Admin;
-import lk.ijse.bookWormLibraryManagementSystem.entity.User;
-import lk.ijse.bookWormLibraryManagementSystem.repository.RepositoryFactory;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.AdminRepository;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.UserRepository;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.impl.AdminRepositoryImpl;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.impl.UserRepositoryImpl;
-import lk.ijse.bookWormLibraryManagementSystem.service.custom.UserService;
-import lk.ijse.bookWormLibraryManagementSystem.util.SessionFactoryConfig;
+import LibraryManagementSystem.dto.AdminDto;
+import LibraryManagementSystem.dto.UserDto;
+import LibraryManagementSystem.entity.Admin;
+import LibraryManagementSystem.entity.User;
+import LibraryManagementSystem.repository.RepositoryFactory;
+import LibraryManagementSystem.repository.custom.AdminRepository;
+import LibraryManagementSystem.repository.custom.UserRepository;
+import LibraryManagementSystem.repository.custom.impl.AdminRepositoryImpl;
+import LibraryManagementSystem.repository.custom.impl.UserRepositoryImpl;
+import LibraryManagementSystem.service.custom.UserService;
+import LibraryManagementSystem.util.SessionFactoryConfig;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

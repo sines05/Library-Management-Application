@@ -1,14 +1,14 @@
 package LibraryManagementSystem.service.custom.impl;
 
-import lk.ijse.bookWormLibraryManagementSystem.dto.AdminDto;
-import lk.ijse.bookWormLibraryManagementSystem.dto.BookDto;
-import lk.ijse.bookWormLibraryManagementSystem.entity.Admin;
-import lk.ijse.bookWormLibraryManagementSystem.entity.Book;
-import lk.ijse.bookWormLibraryManagementSystem.repository.RepositoryFactory;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.BookRepository;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.impl.BookRepositoryImpl;
-import lk.ijse.bookWormLibraryManagementSystem.service.custom.BookService;
-import lk.ijse.bookWormLibraryManagementSystem.util.SessionFactoryConfig;
+import LibraryManagementSystem.dto.AdminDto;
+import LibraryManagementSystem.dto.BookDto;
+import LibraryManagementSystem.entity.Admin;
+import LibraryManagementSystem.entity.Book;
+import LibraryManagementSystem.repository.RepositoryFactory;
+import LibraryManagementSystem.repository.custom.BookRepository;
+import LibraryManagementSystem.repository.custom.impl.BookRepositoryImpl;
+import LibraryManagementSystem.service.custom.BookService;
+import LibraryManagementSystem.util.SessionFactoryConfig;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

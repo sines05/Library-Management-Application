@@ -1,7 +1,7 @@
 package LibraryManagementSystem.repository.custom;
 
-import lk.ijse.bookWormLibraryManagementSystem.entity.Transaction;
-import lk.ijse.bookWormLibraryManagementSystem.repository.CrudRepository;
+import LibraryManagementSystem.entity.Transaction;
+import LibraryManagementSystem.repository.CrudRepository;
 
 import java.util.List;
 

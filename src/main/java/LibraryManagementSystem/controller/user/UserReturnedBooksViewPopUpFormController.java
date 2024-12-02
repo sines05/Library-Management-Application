@@ -1,7 +1,5 @@
 package LibraryManagementSystem.controller.user;
 
-import LibraryManagementSystem.controller.user.UserReturnedBooksBarFormController;
-import LibraryManagementSystem.controller.user.UserReturnedBooksViewPopUpBarFormController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -77,6 +75,15 @@ public class UserReturnedBooksViewPopUpFormController implements Initializable {
         }
     }
 
+    public void setData() {
+        TransactionDto transactionDto = transactionService
+                .getTransactionData(UserReturnedBooksBarFormController.transactionId);
+
+        lblDueDate.setText(transactionDto.getDueDate());
+        lblId.setText(String.valueOf(transactionDto.getId()));
+        lblTotalBooks.setText(String.valueOf(transactionDto.getBookQty()));
+    }
+
     private void loadDataTable(int id) {
         try {
             FXMLLoader loader = new FXMLLoader(UserReturnedBooksViewPopUpFormController.class.getResource("/view/userReturnedBooksViewPopUpBarForm.fxml"));
@@ -87,15 +94,6 @@ public class UserReturnedBooksViewPopUpFormController implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    public void setData() {
-        TransactionDto transactionDto = transactionService
-                .getTransactionData(UserReturnedBooksBarFormController.transactionId);
-
-        lblDueDate.setText(transactionDto.getDueDate());
-        lblId.setText(String.valueOf(transactionDto.getId()));
-        lblTotalBooks.setText(String.valueOf(transactionDto.getBookQty()));
     }
 
     @Override

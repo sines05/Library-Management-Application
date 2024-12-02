@@ -1,20 +1,20 @@
 package LibraryManagementSystem.service.custom.impl;
 
-import lk.ijse.bookWormLibraryManagementSystem.entity.Admin;
-import lk.ijse.bookWormLibraryManagementSystem.entity.Book;
-import lk.ijse.bookWormLibraryManagementSystem.entity.Branch;
-import lk.ijse.bookWormLibraryManagementSystem.entity.User;
-import lk.ijse.bookWormLibraryManagementSystem.repository.RepositoryFactory;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.AdminRepository;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.BookRepository;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.BranchRepository;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.UserRepository;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.impl.AdminRepositoryImpl;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.impl.BookRepositoryImpl;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.impl.BranchRepositoryImpl;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.impl.UserRepositoryImpl;
-import lk.ijse.bookWormLibraryManagementSystem.service.custom.DeleteService;
-import lk.ijse.bookWormLibraryManagementSystem.util.SessionFactoryConfig;
+import LibraryManagementSystem.entity.Admin;
+import LibraryManagementSystem.entity.Book;
+import LibraryManagementSystem.entity.Branch;
+import LibraryManagementSystem.entity.User;
+import LibraryManagementSystem.repository.RepositoryFactory;
+import LibraryManagementSystem.repository.custom.AdminRepository;
+import LibraryManagementSystem.repository.custom.BookRepository;
+import LibraryManagementSystem.repository.custom.BranchRepository;
+import LibraryManagementSystem.repository.custom.UserRepository;
+import LibraryManagementSystem.repository.custom.impl.AdminRepositoryImpl;
+import LibraryManagementSystem.repository.custom.impl.BookRepositoryImpl;
+import LibraryManagementSystem.repository.custom.impl.BranchRepositoryImpl;
+import LibraryManagementSystem.repository.custom.impl.UserRepositoryImpl;
+import LibraryManagementSystem.service.custom.DeleteService;
+import LibraryManagementSystem.util.SessionFactoryConfig;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

@@ -1,7 +1,7 @@
 package LibraryManagementSystem.service.custom;
 
-import lk.ijse.bookWormLibraryManagementSystem.dto.AdminDto;
-import lk.ijse.bookWormLibraryManagementSystem.service.SuperService;
+import LibraryManagementSystem.dto.AdminDto;
+import LibraryManagementSystem.service.SuperService;
 
 import java.util.List;
 

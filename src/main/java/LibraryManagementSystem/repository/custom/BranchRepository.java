@@ -1,7 +1,7 @@
 package LibraryManagementSystem.repository.custom;
 
-import lk.ijse.bookWormLibraryManagementSystem.entity.Branch;
-import lk.ijse.bookWormLibraryManagementSystem.repository.CrudRepository;
+import LibraryManagementSystem.entity.Branch;
+import LibraryManagementSystem.repository.CrudRepository;
 
 public interface BranchRepository extends CrudRepository<Branch> {
 

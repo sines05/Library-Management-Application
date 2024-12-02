@@ -1,7 +1,7 @@
 package LibraryManagementSystem.repository.custom;
 
-import lk.ijse.bookWormLibraryManagementSystem.entity.TransactionDetail;
-import lk.ijse.bookWormLibraryManagementSystem.repository.SuperRepository;
+import LibraryManagementSystem.entity.TransactionDetail;
+import LibraryManagementSystem.repository.SuperRepository;
 
 public interface TransactionDetailRepository extends SuperRepository {
 

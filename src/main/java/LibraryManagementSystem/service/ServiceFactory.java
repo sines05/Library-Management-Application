@@ -1,6 +1,6 @@
 package LibraryManagementSystem.service;
 
-import lk.ijse.bookWormLibraryManagementSystem.service.custom.impl.*;
+import LibraryManagementSystem.service.custom.impl.*;
 
 public class ServiceFactory {
 

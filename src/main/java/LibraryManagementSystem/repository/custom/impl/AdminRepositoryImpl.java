@@ -1,8 +1,8 @@
 package LibraryManagementSystem.repository.custom.impl;
 
-import lk.ijse.bookWormLibraryManagementSystem.entity.Admin;
-import lk.ijse.bookWormLibraryManagementSystem.projection.AdminProjection;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.AdminRepository;
+import LibraryManagementSystem.entity.Admin;
+import LibraryManagementSystem.projection.AdminProjection;
+import LibraryManagementSystem.repository.custom.AdminRepository;
 import lombok.Setter;
 import org.hibernate.Session;
 import org.hibernate.query.Query;

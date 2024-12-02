@@ -1,6 +1,6 @@
 package LibraryManagementSystem.entity;
 
-import lk.ijse.bookWormLibraryManagementSystem.embedded.Name;
+import LibraryManagementSystem.embedded.Name;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

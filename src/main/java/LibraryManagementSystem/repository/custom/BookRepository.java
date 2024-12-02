@@ -1,7 +1,7 @@
 package LibraryManagementSystem.repository.custom;
 
-import lk.ijse.bookWormLibraryManagementSystem.entity.Book;
-import lk.ijse.bookWormLibraryManagementSystem.repository.CrudRepository;
+import LibraryManagementSystem.entity.Book;
+import LibraryManagementSystem.repository.CrudRepository;
 
 public interface BookRepository extends CrudRepository<Book> {
 

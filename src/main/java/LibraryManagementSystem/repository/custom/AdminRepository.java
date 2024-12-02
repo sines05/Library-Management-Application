@@ -1,8 +1,8 @@
 package LibraryManagementSystem.repository.custom;
 
-import lk.ijse.bookWormLibraryManagementSystem.entity.Admin;
-import lk.ijse.bookWormLibraryManagementSystem.projection.AdminProjection;
-import lk.ijse.bookWormLibraryManagementSystem.repository.CrudRepository;
+import LibraryManagementSystem.entity.Admin;
+import LibraryManagementSystem.projection.AdminProjection;
+import LibraryManagementSystem.repository.CrudRepository;
 
 import java.util.List;
 

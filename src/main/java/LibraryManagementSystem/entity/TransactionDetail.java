@@ -1,6 +1,6 @@
 package LibraryManagementSystem.entity;
 
-import lk.ijse.bookWormLibraryManagementSystem.embedded.TransactionDetailPK;
+import LibraryManagementSystem.embedded.TransactionDetailPK;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

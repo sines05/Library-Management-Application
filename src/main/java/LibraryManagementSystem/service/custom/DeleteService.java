@@ -1,6 +1,6 @@
 package LibraryManagementSystem.service.custom;
 
-import lk.ijse.bookWormLibraryManagementSystem.service.SuperService;
+import LibraryManagementSystem.service.SuperService;
 
 public interface DeleteService extends SuperService {
 

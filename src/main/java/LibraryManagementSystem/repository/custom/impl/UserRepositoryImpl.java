@@ -1,7 +1,7 @@
 package LibraryManagementSystem.repository.custom.impl;
 
-import lk.ijse.bookWormLibraryManagementSystem.entity.User;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.UserRepository;
+import LibraryManagementSystem.entity.User;
+import LibraryManagementSystem.repository.custom.UserRepository;
 import lombok.Setter;
 import org.hibernate.Session;
 import org.hibernate.query.Query;

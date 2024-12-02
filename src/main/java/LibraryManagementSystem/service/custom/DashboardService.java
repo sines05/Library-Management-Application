@@ -1,8 +1,8 @@
 package LibraryManagementSystem.service.custom;
 
-import lk.ijse.bookWormLibraryManagementSystem.dto.TransactionDto;
-import lk.ijse.bookWormLibraryManagementSystem.projection.AdminProjection;
-import lk.ijse.bookWormLibraryManagementSystem.service.SuperService;
+import LibraryManagementSystem.dto.TransactionDto;
+import LibraryManagementSystem.projection.AdminProjection;
+import LibraryManagementSystem.service.SuperService;
 
 import java.util.List;
 

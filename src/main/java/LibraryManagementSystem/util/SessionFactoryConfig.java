@@ -1,6 +1,6 @@
 package LibraryManagementSystem.util;
 
-import lk.ijse.bookWormLibraryManagementSystem.entity.*;
+import LibraryManagementSystem.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

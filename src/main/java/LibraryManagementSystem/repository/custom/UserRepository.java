@@ -1,7 +1,7 @@
 package LibraryManagementSystem.repository.custom;
 
-import lk.ijse.bookWormLibraryManagementSystem.entity.User;
-import lk.ijse.bookWormLibraryManagementSystem.repository.CrudRepository;
+import LibraryManagementSystem.entity.User;
+import LibraryManagementSystem.repository.CrudRepository;
 
 public interface UserRepository extends CrudRepository<User> {
 
