@@ -13,22 +13,22 @@
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblName" layoutX="123.0" layoutY="20.0" text="Hibernate-Core">
+        <Label fx:id="lblName" layoutX="123.0" layoutY="20.0" prefHeight="25.0" prefWidth="173.0" text="Hibernate-Core">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblType" layoutX="306.0" layoutY="20.0" text="Educational">
+        <Label fx:id="lblType" layoutX="380.0" layoutY="18.0" text="Educational">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblLanguage" layoutX="474.0" layoutY="20.0" text="English">
+        <Label fx:id="lblLanguage" layoutX="544.0" layoutY="18.0" text="English">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblAvailability" layoutX="610.0" layoutY="20.0" text="Available">
+        <Label fx:id="lblAvailability" layoutX="645.0" layoutY="20.0" text="Available">
             <font>
                 <Font size="16.0" />
             </font>
