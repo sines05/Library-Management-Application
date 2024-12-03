@@ -93,8 +93,14 @@ public class AddBookPopUpFormController {
                 }
             }
 
+            // Kiểm tra nếu ISBN trống hoặc không tìm thấy
+            if (isbn.isEmpty()) {
+                showErrorAlert("Không thể thêm sách vào cơ sở dữ liệu vì không tìm thấy ISBN!");
+                return;
+            }
+
             // Kiểm tra trùng lặp dựa trên ISBN
-            if (!isbn.isEmpty() && bookService.isBookExistsByIsbn(isbn)) {
+            if (bookService.isBookExistsByIsbn(isbn)) {
                 showErrorAlert("Sách với ISBN này đã tồn tại trong cơ sở dữ liệu!");
                 return;
             }
