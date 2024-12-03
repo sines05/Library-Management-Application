@@ -105,7 +105,8 @@ public class AdminBookManagementBarFormController {
         lblName.setText(bookDto.getName());
         lblType.setText(bookDto.getType());
         lblLanguage.setText(bookDto.getLanguage());
-        lblAvailability.setText(bookDto.getStatus());
+        lblAvailability.setText(String.valueOf(bookDto.getQuantity()));
+
     }
 
 }

@@ -51,9 +51,16 @@ public class UserBorrowBooksBarFormController {
         lblName.setText(bookDto.getName());
         lblType.setText(bookDto.getType());
         lblLanguage.setText(bookDto.getLanguage());
-        lblAvailability.setText(bookDto.getStatus());
+        lblAvailability.setText(String.valueOf(bookDto.getStatus())); // Hiển thị số lượng sách hiện có
+
+        if (bookDto.getQuantity() <= 0) {
+            checkBox.setVisible(false); // Ẩn checkbox nếu sách không có sẵn
+            lblAvailability.setText("Unavailable"); // Hiển thị trạng thái không có sách
+        }
 
         if (bookDto.getStatus().equals("Unavailable")) checkBox.setVisible(false);
+
     }
+
 
 }

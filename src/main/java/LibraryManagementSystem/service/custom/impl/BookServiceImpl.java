@@ -34,6 +34,12 @@ public class BookServiceImpl implements BookService {
         Transaction transaction = session.beginTransaction();
         try {
             BookRepositoryImpl.setSession(session);
+
+            // Kiểm tra id có tồn tại hay không
+            if (bookRepository.getData(dto.getId()) != null) {
+                throw new IllegalArgumentException("Book ID already exists.");
+            }
+
             bookRepository.save(book);
             transaction.commit();
             return true;
@@ -46,24 +52,41 @@ public class BookServiceImpl implements BookService {
         }
     }
 
+
     @Override
     public boolean updateBook(BookDto dto) {
+        // Chuyển đối tượng BookDto thành đối tượng Book
         Book book = convertToEntity(dto);
+
+        // Khởi tạo session
         initializeSession();
         Transaction transaction = session.beginTransaction();
+
         try {
+            // Đảm bảo repository sử dụng đúng session
             BookRepositoryImpl.setSession(session);
-            bookRepository.update(book);
+
+            // Thay thế phương thức update() bằng merge() để tránh lỗi liên quan đến session
+            session.merge(book);  // Gọi merge() thay vì update()
+
+            // Commit transaction nếu không có lỗi
             transaction.commit();
-            return true;
+
+            return true;  // Trả về true nếu update thành công
         } catch (Exception e) {
+            // Nếu có lỗi, in ra lỗi và rollback transaction
             e.printStackTrace();
-            transaction.rollback();
-            return false;
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            return false;  // Trả về false nếu có lỗi
         } finally {
+            // Đảm bảo session được đóng
             session.close();
         }
     }
+
+
 
     @Override
     public BookDto getBookData(int id) {
