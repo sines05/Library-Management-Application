@@ -98,7 +98,7 @@ public class AddBookPopUpFormController {
             bookDto.setType(txtType.getText());
             bookDto.setAdmin(AdminSignInFormController.admin);
             bookDto.setStatus("Available");
-            bookDto.setQuantity(quantity);  // Gán số lượng vào BookDto
+            bookDto.setQuantity(quantity);  // Lưu số lượng vào BookDto
 
             if (bookService.saveBook(bookDto)) {
                 Navigation.closePopUpPane();
@@ -273,18 +273,6 @@ public class AddBookPopUpFormController {
     }
 
     @FXML
-    void txtQuantityOnAction(ActionEvent event) {
-        btnAddOnAction(event); // Khi nhấn Enter, gọi sự kiện thêm sách
-    }
-
-    @FXML
-    void txtQuantityOnKeyPressed(KeyEvent event) {
-        if (txtQuantity.getText().isEmpty()) {
-            lblQuantityAlert.setText("Invalid Quantity!!");
-        } else lblQuantityAlert.setText(" ");
-    }
-
-    @FXML
     void btnCancelOnAction(ActionEvent event) {
         Navigation.closePopUpPane();
     }
@@ -358,4 +346,17 @@ public class AddBookPopUpFormController {
             lblTypeAlert.setText("Invalid Book Type!!");
         } else lblTypeAlert.setText(" ");
     }
+
+    @FXML
+    void txtQuantityOnAction(ActionEvent event) {
+        btnAddOnAction(event); // Khi nhấn Enter, gọi sự kiện thêm sách
+    }
+
+    @FXML
+    void txtQuantityOnKeyPressed(KeyEvent event) {
+        if (txtQuantity.getText().isEmpty()) {
+            lblQuantityAlert.setText("Invalid Quantity!!");
+        } else lblQuantityAlert.setText(" ");
+    }
+
 }
