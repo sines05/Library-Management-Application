@@ -69,7 +69,7 @@ public class AdminRepositoryImpl implements AdminRepository {
     @Override
     public List<AdminProjection> getAdminIdAndName() {
         String jpqlQuery = "SELECT " +
-                "new lk.ijse.bookWormLibraryManagementSystem.projection.AdminProjection(A.id, A.name) " +
+                "new LibraryManagementSystem.projection.AdminProjection(A.id, A.name) " +
                 "FROM Admin AS A";
         Query query = session.createQuery(jpqlQuery);
         List<AdminProjection> list = query.list();
