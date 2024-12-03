@@ -20,32 +20,37 @@
                 <Line endX="799.0" layoutX="121.0" layoutY="71.0" startX="-100.0" />
                 <HBox alignment="CENTER_LEFT" layoutX="62.0" layoutY="15.0" prefHeight="60.0" prefWidth="842.0">
                     <children>
-                        <Label prefHeight="25.0" prefWidth="57.0" text="ID">
+                        <Label prefHeight="25.0" prefWidth="23.0" text="ID">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
-                        <Label layoutX="10.0" layoutY="30.0" prefHeight="25.0" prefWidth="309.0" text="Name">
+                        <Label layoutX="10.0" layoutY="30.0" prefHeight="25.0" prefWidth="258.0" text="Name">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
-                        <Label layoutX="27.0" layoutY="30.0" prefHeight="25.0" prefWidth="170.0" text="Type">
+                        <Label layoutX="27.0" layoutY="30.0" prefHeight="25.0" prefWidth="73.0" text="Type">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
-                        <Label layoutX="45.0" layoutY="30.0" prefHeight="25.0" prefWidth="80.0" text="Language">
+                        <Label layoutX="45.0" layoutY="30.0" prefHeight="25.0" prefWidth="91.0" text="Language">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
-                        <Label layoutX="62.0" layoutY="30.0" prefHeight="25.0" prefWidth="101.0" text="Availability">
+                        <Label layoutX="62.0" layoutY="30.0" prefHeight="25.0" prefWidth="148.0" text="Availability">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
-                        <Label layoutX="79.0" layoutY="30.0" text="Action">
+                        <Label layoutX="79.0" layoutY="30.0" prefHeight="25.0" prefWidth="131.0" text="Action">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="28.0" prefHeight="25.0" prefWidth="89.0" text="Author">
                             <font>
                                 <Font size="16.0" />
                             </font>

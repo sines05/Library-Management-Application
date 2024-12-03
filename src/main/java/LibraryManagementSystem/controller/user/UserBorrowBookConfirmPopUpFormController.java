@@ -1,4 +1,4 @@
-package LibraryManagementSystem.user;
+package LibraryManagementSystem.controller.user;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -41,6 +41,8 @@ public class UserBorrowBookConfirmPopUpFormController implements Initializable {
 
     @FXML
     private Label lblId;
+    @FXML
+    private Label lblAuthor;
 
     @FXML
     private Label lblTotalBooks;

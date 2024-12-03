@@ -1,4 +1,4 @@
-package LibraryManagementSystem.user;
+package LibraryManagementSystem.controller.user;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,6 +24,9 @@ public class UserBorrowBooksBarFormController {
 
     @FXML
     private Label lblType;
+    @FXML
+    private Label lblAuthor;
+
 
     @FXML
     private CheckBox checkBox;
@@ -51,6 +54,7 @@ public class UserBorrowBooksBarFormController {
         lblName.setText(bookDto.getName());
         lblType.setText(bookDto.getType());
         lblLanguage.setText(bookDto.getLanguage());
+        lblAuthor.setText(bookDto.getAuthor());
         lblAvailability.setText(bookDto.getStatus());
 
         if (bookDto.getStatus().equals("Unavailable")) checkBox.setVisible(false);

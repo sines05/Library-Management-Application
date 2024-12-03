@@ -13,17 +13,17 @@
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblName" layoutX="130.0" layoutY="23.0" prefHeight="25.0" prefWidth="122.0" text="Hibernate-Core">
+        <Label fx:id="lblName" layoutX="125.0" layoutY="22.0" prefHeight="25.0" prefWidth="122.0" text="Hibernate-Core">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblType" layoutX="345.0" layoutY="23.0" prefHeight="25.0" prefWidth="115.0" text="Educational">
+        <Label fx:id="lblType" layoutX="321.0" layoutY="22.0" prefHeight="25.0" prefWidth="84.0" text="Educational">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblLanguage" layoutX="563.0" layoutY="23.0" prefHeight="25.0" prefWidth="77.0" text="English">
+        <Label fx:id="lblLanguage" layoutX="614.0" layoutY="23.0" prefHeight="25.0" prefWidth="77.0" text="English">
             <font>
                 <Font size="16.0" />
             </font>
@@ -33,5 +33,10 @@
                 <Image url="@../assests/icon/deleteIconBlack.png" />
             </image>
         </ImageView>
+        <Label fx:id="lblAuthor" layoutX="465.0" layoutY="23.0" prefHeight="25.0" prefWidth="84.0" text="Author">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
     </children>
 </Pane>

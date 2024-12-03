@@ -6,47 +6,54 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane prefHeight="60.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.admin.AdminBookManagementBarFormController">
+<Pane prefHeight="38.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.admin.AdminBookManagementBarFormController">
     <children>
-        <Label fx:id="lblId" layoutX="44.0" layoutY="20.0" text="1">
+        <Label fx:id="lblId" layoutX="20.0" layoutY="9.0" prefHeight="25.0" prefWidth="13.0" text="1">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblName" layoutX="123.0" layoutY="20.0" prefHeight="25.0" prefWidth="173.0" text="Hibernate-Core">
+        <Label fx:id="lblName" layoutX="42.0" layoutY="10.0" prefHeight="25.0" prefWidth="264.0" text="Hibernate-Core">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblType" layoutX="380.0" layoutY="18.0" text="Educational">
+        <Label fx:id="lblType" layoutX="306.0" layoutY="9.0" prefHeight="25.0" prefWidth="132.0" text="Educational">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblLanguage" layoutX="544.0" layoutY="18.0" text="English">
+        <Label fx:id="lblLanguage" layoutX="473.0" layoutY="9.0" text="English">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblAvailability" layoutX="645.0" layoutY="20.0" text="Available">
+        <Label fx:id="lblAvailability" layoutX="562.0" layoutY="9.0" text="Available">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <ImageView fx:id="imgDelete" fitHeight="24.0" fitWidth="24.0" layoutX="760.0" layoutY="18.0" onMouseClicked="#imgDeleteOnMouseClicked" onMouseEntered="#imgDeleteOnMouseEntered" onMouseExited="#imgDeleteOnMouseExited" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="imgDelete" fitHeight="24.0" fitWidth="24.0" layoutX="672.0" layoutY="7.0" onMouseClicked="#imgDeleteOnMouseClicked" onMouseEntered="#imgDeleteOnMouseEntered" onMouseExited="#imgDeleteOnMouseExited" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../assests/icon/deleteIconBlack.png" />
             </image>
         </ImageView>
-        <ImageView fx:id="imgView" fitHeight="24.0" fitWidth="24.0" layoutX="795.0" layoutY="18.0" onMouseClicked="#imgViewOnMouseClicked" onMouseEntered="#imgViewOnMouseEntered" onMouseExited="#imgViewOnMouseExited" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="imgView" fitHeight="24.0" fitWidth="24.0" layoutX="704.0" layoutY="7.0" onMouseClicked="#imgViewOnMouseClicked" onMouseEntered="#imgViewOnMouseEntered" onMouseExited="#imgViewOnMouseExited" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../assests/icon/viewIconBlack.png" />
             </image>
         </ImageView>
-        <ImageView fx:id="imgEdit" fitHeight="24.0" fitWidth="24.0" layoutX="729.0" layoutY="18.0" onMouseClicked="#imgEditOnMouseClicked" onMouseEntered="#imgEditOnMouseEntered" onMouseExited="#imgEditOnMouseExited" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="imgEdit" fitHeight="24.0" fitWidth="24.0" layoutX="648.0" layoutY="7.0" onMouseClicked="#imgEditOnMouseClicked" onMouseEntered="#imgEditOnMouseEntered" onMouseExited="#imgEditOnMouseExited" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../assests/icon/editIconBlack.png" />
             </image>
         </ImageView>
+        <Label fx:id="lblAuthor" layoutX="752.0" layoutY="9.0" text="unknow">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
     </children>
 </Pane>
+
+

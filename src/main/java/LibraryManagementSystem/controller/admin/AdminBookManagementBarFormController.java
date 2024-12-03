@@ -13,6 +13,7 @@ import LibraryManagementSystem.util.StyleUtil;
 import java.io.IOException;
 
 public class AdminBookManagementBarFormController {
+
     @FXML
     private ImageView imgDelete;
 
@@ -30,6 +31,9 @@ public class AdminBookManagementBarFormController {
 
     @FXML
     private Label lblLanguage;
+
+    @FXML
+    private Label lblAuthor;
 
     @FXML
     private Label lblName;
@@ -105,6 +109,8 @@ public class AdminBookManagementBarFormController {
         lblName.setText(bookDto.getName());
         lblType.setText(bookDto.getType());
         lblLanguage.setText(bookDto.getLanguage());
+        lblAuthor.setText(bookDto.getLAuthor());
+
         lblAvailability.setText(bookDto.getStatus());
     }
 

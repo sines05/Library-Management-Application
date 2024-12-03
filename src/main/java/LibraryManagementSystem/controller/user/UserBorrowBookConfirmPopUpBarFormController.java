@@ -1,4 +1,4 @@
-package LibraryManagementSystem.user;
+package LibraryManagementSystem.controller.user;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -25,6 +25,8 @@ public class UserBorrowBookConfirmPopUpBarFormController {
 
     @FXML
     private Label lblType;
+    @FXML
+    private Label lblAuthor;
 
     BookDto bookDto;
 
@@ -49,13 +51,20 @@ public class UserBorrowBookConfirmPopUpBarFormController {
     }
 
     public void setData(int id) {
+        if (bookDto == null) {
+            // Hiển thị thông báo hoặc xử lý khi không tìm thấy cuốn sách
+            lblId.setText("Không tìm thấy sách");
+            lblName.setText("Không có tên sách");
+            lblType.setText("Không có loại sách");
+            lblLanguage.setText("Không có ngôn ngữ");
+            lblAuthor.setText("Không có tác giả"); }
         bookDto = bookService.getBookData(id);
 
         lblId.setText(String.valueOf(bookDto.getId()));
         lblName.setText(bookDto.getName());
         lblType.setText(bookDto.getType());
         lblLanguage.setText(bookDto.getLanguage());
+        lblAuthor.setText(bookDto.getAuthor());
     }
 
 }
-

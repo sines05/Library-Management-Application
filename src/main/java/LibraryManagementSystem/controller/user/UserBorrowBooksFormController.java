@@ -1,4 +1,4 @@
-package LibraryManagementSystem.user;
+package LibraryManagementSystem.controller.user;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -45,6 +45,7 @@ public class UserBorrowBooksFormController implements Initializable {
 
     @FXML
     private TextField txtSearch;
+
 
     @FXML
     private VBox vBoxBooks;

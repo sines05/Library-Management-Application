@@ -1,14 +1,14 @@
 package LibraryManagementSystem.service.custom.impl;
 
-import lk.ijse.bookWormLibraryManagementSystem.dto.AdminDto;
-import lk.ijse.bookWormLibraryManagementSystem.dto.BookDto;
-import lk.ijse.bookWormLibraryManagementSystem.entity.Admin;
-import lk.ijse.bookWormLibraryManagementSystem.entity.Book;
-import lk.ijse.bookWormLibraryManagementSystem.repository.RepositoryFactory;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.BookRepository;
-import lk.ijse.bookWormLibraryManagementSystem.repository.custom.impl.BookRepositoryImpl;
-import lk.ijse.bookWormLibraryManagementSystem.service.custom.BookService;
-import lk.ijse.bookWormLibraryManagementSystem.util.SessionFactoryConfig;
+import LibraryManagementSystem.dto.AdminDto;
+import LibraryManagementSystem.dto.BookDto;
+import LibraryManagementSystem.entity.Admin;
+import LibraryManagementSystem.entity.Book;
+import LibraryManagementSystem.repository.RepositoryFactory;
+import LibraryManagementSystem.repository.custom.BookRepository;
+import LibraryManagementSystem.repository.custom.impl.BookRepositoryImpl;
+import LibraryManagementSystem.service.custom.BookService;
+import LibraryManagementSystem.util.SessionFactoryConfig;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -16,6 +16,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookServiceImpl implements BookService {
+    private Book convertToEntity(BookDto dto) {
+        Book entity = new Book();
+        entity.setId(dto.getId());
+        entity.setName(dto.getName());
+        entity.setType(dto.getType());
+        entity.setLanguage(dto.getLanguage());
+
+        // Kiểm tra và đảm bảo author không phải là null hoặc rỗng
+        if (dto.getAuthor() == null || dto.getAuthor().isEmpty()) {
+            entity.setAuthor("Unknown Author");  // Gán giá trị mặc định nếu author là null hoặc rỗng
+        } else {
+            entity.setAuthor(dto.getAuthor());
+        }
+
+        entity.setStatus(dto.getStatus());
+        entity.setAdmin(convertToAdminEntity(dto.getAdmin()));
+        return entity;
+    }
+
 
     BookRepository bookRepository =
             (BookRepository) RepositoryFactory.getInstance()
@@ -80,8 +99,11 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+
+
     public List<BookDto> getAllBookId() {
         List<BookDto> idList = new ArrayList<>();
+
         try {
             initializeSession();
             BookRepositoryImpl.setSession(session);
@@ -97,16 +119,19 @@ public class BookServiceImpl implements BookService {
         return idList;
     }
 
-    private Book convertToEntity(BookDto dto) {
+ /*   private Book convertToEntity(BookDto dto) {
         Book entity = new Book();
         entity.setId(dto.getId());
         entity.setName(dto.getName());
         entity.setType(dto.getType());
         entity.setLanguage(dto.getLanguage());
+        entity.setAuthor(dto.getAuthor());
+
+
         entity.setStatus(dto.getStatus());
         entity.setAdmin(convertToAdminEntity(dto.getAdmin()));
         return entity;
-    }
+    }*/
 
     private BookDto convertToDto(Book entity) {
         return new BookDto(
@@ -115,6 +140,7 @@ public class BookServiceImpl implements BookService {
                 entity.getType(),
                 entity.getLanguage(),
                 entity.getStatus(),
+                entity.getAuthor(),
                 convertToAdminDto(entity.getAdmin())
         );
     }

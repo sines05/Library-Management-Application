@@ -1,4 +1,4 @@
-package LibraryManagementSystem.user;
+package LibraryManagementSystem.controller.user;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -110,7 +110,7 @@ public class UserDashboardFormController implements Initializable {
         pieChart.setLabelsVisible(false);
         pieChart.setLegendVisible(false);
         pieChart.setClockwise(true);
-        pieChart.setPrefSize(630, 630);
+        pieChart.setPrefSize(352, 327);
 
         pieChartPane.getChildren().add(pieChart);
     }

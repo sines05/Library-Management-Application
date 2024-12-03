@@ -14,6 +14,12 @@ public class BookDto {
     private String type;
     private String language;
     private String status;
+    private String author;
     private AdminDto admin;
 
+
+    public String getLAuthor() {
+        return author;
+    }
 }
+

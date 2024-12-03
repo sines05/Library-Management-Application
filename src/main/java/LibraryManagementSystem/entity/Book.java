@@ -32,8 +32,14 @@ public class Book {
     @Column(nullable = false)
     private String language;
 
+    @Column(name = "author", nullable = true)
+    private String author;
+
     @Column(name = "availability_status", nullable = false)
     private String status;
+
+
+
 
     @UpdateTimestamp
     @Column(name = "last_updated")
@@ -50,4 +56,8 @@ public class Book {
     )
     private List<TransactionDetail> transactionDetails = new ArrayList<>();
 
+    @Override
+    public String toString() {
+        return id + name + type + language + author;
+    }
 }

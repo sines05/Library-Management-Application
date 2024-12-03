@@ -14,17 +14,17 @@
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblName" layoutX="125.0" layoutY="20.0" prefHeight="25.0" prefWidth="167.0" text="Hibernate-Core">
+        <Label fx:id="lblName" layoutX="80.0" layoutY="20.0" prefHeight="25.0" prefWidth="198.0" text="Hibernate-Core">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblType" layoutX="312.0" layoutY="20.0" text="Educational">
+        <Label fx:id="lblType" layoutX="286.0" layoutY="20.0" text="Educational">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Label fx:id="lblLanguage" layoutX="532.0" layoutY="20.0" prefHeight="25.0" prefWidth="66.0" text="English">
+        <Label fx:id="lblLanguage" layoutX="438.0" layoutY="20.0" prefHeight="25.0" prefWidth="66.0" text="English">
             <font>
                 <Font size="16.0" />
             </font>
@@ -35,5 +35,10 @@
             </font>
         </Label>
         <CheckBox fx:id="checkBox" layoutX="916.0" layoutY="24.0" mnemonicParsing="false" onAction="#checkBoxOnAction" prefHeight="17.0" prefWidth="9.0" />
+        <Label fx:id="lblAuthor" layoutX="558.0" layoutY="20.0" prefHeight="25.0" prefWidth="111.0" text="Author">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
     </children>
 </Pane>

@@ -13,32 +13,37 @@
         <Pane layoutX="26.0" layoutY="25.0" prefHeight="484.0" prefWidth="794.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-border-color: #E8E8E8; -fx-border-radius: 12;">
             <children>
                 <Line endX="644.0" endY="1.0" layoutX="118.0" layoutY="54.0" startX="-91.00001525878906" startY="0.9999923706054688" stroke="#e8e8e8" />
-                <Label layoutX="50.0" layoutY="24.0" text="Book ID">
+                <Label layoutX="34.0" layoutY="24.0" text="Book ID">
                     <font>
                         <Font size="16.0" />
                     </font>
                 </Label>
-                <Label layoutX="182.0" layoutY="24.0" prefHeight="25.0" prefWidth="80.0" text="Name">
+                <Label layoutX="129.0" layoutY="24.0" prefHeight="25.0" prefWidth="107.0" text="Name">
                     <font>
                         <Font size="16.0" />
                     </font>
                 </Label>
-                <Label layoutX="314.0" layoutY="24.0" prefHeight="25.0" prefWidth="80.0" text="Type">
+                <Label layoutX="277.0" layoutY="23.0" prefHeight="25.0" prefWidth="80.0" text="Type">
                     <font>
                         <Font size="16.0" />
                     </font>
                 </Label>
-                <Label layoutX="467.0" layoutY="24.0" prefHeight="25.0" prefWidth="107.0" text="Language">
+                <Label layoutX="409.0" layoutY="24.0" prefHeight="25.0" prefWidth="107.0" text="Language">
                     <font>
                         <Font size="16.0" />
                     </font>
                 </Label>
-                <ScrollPane layoutX="26.0" layoutY="57.0" prefHeight="419.0" prefWidth="755.0" style="-fx-background-color: white;">
+                <ScrollPane layoutX="26.0" layoutY="57.0" prefHeight="419.0" prefWidth="736.0" style="-fx-background-color: white;">
                     <content>
                         <VBox fx:id="vBox" prefHeight="413.0" prefWidth="735.0" style="-fx-background-color: WHITE;" />
                     </content>
                 </ScrollPane>
                 <Label layoutX="660.0" layoutY="24.0" prefHeight="25.0" prefWidth="80.0" text="Action">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="538.0" layoutY="23.0" prefHeight="25.0" prefWidth="80.0" text="Author">
                     <font>
                         <Font size="16.0" />
                     </font>
@@ -90,7 +95,6 @@
                 <JFXButton layoutX="-4.0" layoutY="1.0" onAction="#btnConfirmOnAction" onMouseEntered="#btnConfirmOnMouseEntered" onMouseExited="#btnConfirmOnMouseExited" prefHeight="54.0" prefWidth="216.0" style="-fx-background-radius: 10;" text=" " />
             </children>
         </Pane>
-        <Pane layoutX="789.0" layoutY="84.0" prefHeight="419.0" prefWidth="16.0" style="-fx-background-color: white; -fx-background-radius: 0 0 12 0;" />
         <Pane fx:id="cancelPane" layoutX="427.0" layoutY="518.0" prefHeight="54.0" prefWidth="133.0" style="-fx-background-color: #D7D7D7; -fx-background-radius: 10;">
             <children>
                 <Label fx:id="lblCancel" layoutX="35.0" layoutY="15.0" prefHeight="25.0" prefWidth="80.0" text="CANCEL">
