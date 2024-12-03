@@ -16,6 +16,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookServiceImpl implements BookService {
+    @Override
+    public boolean isBookExistsByIsbn(String isbn) {
+        try {
+            initializeSession();
+            BookRepositoryImpl.setSession(session);
+
+            Book book = bookRepository.getBookByIsbn(isbn);
+            return book != null;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        } finally {
+            session.close();
+        }
+    }
 
     BookRepository bookRepository =
             (BookRepository) RepositoryFactory.getInstance()
@@ -129,6 +144,7 @@ public class BookServiceImpl implements BookService {
         entity.setStatus(dto.getStatus());
         entity.setQuantity(dto.getQuantity());
         entity.setAdmin(convertToAdminEntity(dto.getAdmin()));
+        entity.setIsbn(dto.getIsbn());
         return entity;
     }
 
@@ -140,7 +156,8 @@ public class BookServiceImpl implements BookService {
                 entity.getLanguage(),
                 entity.getStatus(),
                 convertToAdminDto(entity.getAdmin()),
-                entity.getQuantity()
+                entity.getQuantity(),
+                entity.getIsbn()
         );
     }
 

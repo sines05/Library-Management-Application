@@ -53,4 +53,6 @@ public class Book {
     @Column(nullable = false)
     private int quantity;
 
+    @Column(name = "isbn")
+    private String isbn;
 }

@@ -14,6 +14,14 @@ public class BookRepositoryImpl implements BookRepository {
     private static Session session;
 
     @Override
+    public Book getBookByIsbn(String isbn) {
+        String hql = "FROM Book WHERE isbn = :isbn";
+        Query<Book> query = session.createQuery(hql, Book.class);
+        query.setParameter("isbn", isbn);
+        return query.uniqueResult();
+    }
+
+    @Override
     public void save(Book entity) {
         // Kiểm tra xem id đã tồn tại chưa trước khi lưu
         if (getData(entity.getId()) != null) {

@@ -11,5 +11,5 @@ public interface BookService extends SuperService {
     boolean updateBook(BookDto dto);
     BookDto getBookData(int id);
     List<BookDto> getAllBookId();
-
+    boolean isBookExistsByIsbn(String isbn);
 }

@@ -239,7 +239,8 @@ public class TransactionServiceImpl implements TransactionService {
                 entity.getLanguage(),
                 entity.getStatus(),
                 convertToAdminDto(entity.getAdmin()),
-                entity.getQuantity()
+                entity.getQuantity(),
+                entity.getIsbn()
         );
     }
 

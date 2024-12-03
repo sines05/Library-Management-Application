@@ -80,6 +80,25 @@ public class AddBookPopUpFormController {
     @FXML
     void btnAddOnAction(ActionEvent event) {
         if (validateBook()) {
+            String isbn = "";
+            String title = txtName.getText().trim();
+
+            // Lấy ISBN từ sách được chọn trong kết quả tìm kiếm
+            String selectedBookInfo = lstBooks.getSelectionModel().getSelectedItem();
+            if (selectedBookInfo != null) {
+                String selectedBookTitle = selectedBookInfo.split(" - ")[0];
+                Map<String, String> selectedBookDetails = booksDetails.get(selectedBookTitle);
+                if (selectedBookDetails != null) {
+                    isbn = selectedBookDetails.getOrDefault("isbn", "");
+                }
+            }
+
+            // Kiểm tra trùng lặp dựa trên ISBN
+            if (!isbn.isEmpty() && bookService.isBookExistsByIsbn(isbn)) {
+                showErrorAlert("Sách với ISBN này đã tồn tại trong cơ sở dữ liệu!");
+                return;
+            }
+
             int quantity = 0;
             try {
                 quantity = Integer.parseInt(txtQuantity.getText().trim());
@@ -93,18 +112,19 @@ public class AddBookPopUpFormController {
             }
 
             BookDto bookDto = new BookDto();
-            bookDto.setName(txtName.getText());
+            bookDto.setName(title);
             bookDto.setLanguage(txtLanguage.getText());
             bookDto.setType(txtType.getText());
             bookDto.setAdmin(AdminSignInFormController.admin);
             bookDto.setStatus("Available");
-            bookDto.setQuantity(quantity);  // Lưu số lượng vào BookDto
+            bookDto.setQuantity(quantity);
+            bookDto.setIsbn(isbn);
 
             if (bookService.saveBook(bookDto)) {
                 Navigation.closePopUpPane();
                 AdminBookManagementFormController.getInstance().allBookId();
             } else {
-                System.out.println("Unable to save book!");
+                showErrorAlert("Không thể lưu sách!");
             }
         }
     }

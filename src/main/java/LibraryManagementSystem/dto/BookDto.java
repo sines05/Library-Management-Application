@@ -16,5 +16,6 @@ public class BookDto {
     private String status;
     private AdminDto admin;
     private int quantity;
+    private String isbn;
 
 }
