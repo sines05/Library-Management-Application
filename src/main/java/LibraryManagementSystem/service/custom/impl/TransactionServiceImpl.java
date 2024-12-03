@@ -53,10 +53,14 @@ public class TransactionServiceImpl implements TransactionService {
         transactionRepository.save(transactionEntity);
 
         for (BookDto borrowedBook : UserBorrowBooksFormController.getInstance().borrowedBooks) {
-
             Book bookEntity = convertToBookEntity(borrowedBook);
-            BookRepositoryImpl.setSession(session);
-            bookRepository.update(bookEntity);
+
+            // Giảm quantity khi mượn sách
+            if (bookEntity.getQuantity() > 0) {
+                bookEntity.setQuantity(bookEntity.getQuantity() - 1);
+                BookRepositoryImpl.setSession(session);
+                bookRepository.update(bookEntity);
+            }
 
             TransactionDetail transactionDetail = new TransactionDetail();
             transactionDetail.setTransaction(transactionEntity);
@@ -67,6 +71,7 @@ public class TransactionServiceImpl implements TransactionService {
                             bookEntity.getId()
                     )
             );
+
             TransactionDetailRepositoryImpl.setSession(session);
             transactionDetailRepository.save(transactionDetail);
         }
@@ -83,6 +88,7 @@ public class TransactionServiceImpl implements TransactionService {
         }
     }
 
+
     @Override
     public boolean updateTransaction(TransactionDto dto) {
         Transaction transactionEntity = convertToEntity(dto);
@@ -94,9 +100,13 @@ public class TransactionServiceImpl implements TransactionService {
         transactionRepository.update(transactionEntity);
 
         for (Book book : UserReturnBookConfirmPopUpFormController.booksToBeReturned) {
+            // Cập nhật lại trạng thái và tăng quantity khi trả sách
             Book bookEntity = updateBookEntityStatus(book);
-            BookRepositoryImpl.setSession(session);
-            bookRepository.update(bookEntity);
+            if (bookEntity.getQuantity() >= 0) {
+                bookEntity.setQuantity(bookEntity.getQuantity() + 1);  // Tăng quantity khi trả sách
+                BookRepositoryImpl.setSession(session);
+                bookRepository.update(bookEntity);
+            }
         }
 
         try {
@@ -110,6 +120,7 @@ public class TransactionServiceImpl implements TransactionService {
             session.close();
         }
     }
+
 
     @Override
     public TransactionDto getTransactionData(int id) {
@@ -206,6 +217,7 @@ public class TransactionServiceImpl implements TransactionService {
         entity.setLanguage(dto.getLanguage());
         entity.setStatus("Unavailable");
         entity.setAdmin(convertToAdminEntity(dto.getAdmin()));
+        entity.setQuantity(dto.getQuantity());
         return entity;
     }
 
@@ -226,9 +238,11 @@ public class TransactionServiceImpl implements TransactionService {
                 entity.getType(),
                 entity.getLanguage(),
                 entity.getStatus(),
-                convertToAdminDto(entity.getAdmin())
+                convertToAdminDto(entity.getAdmin()),
+                entity.getQuantity()
         );
     }
+
 
     private User convertToUserEntity(UserDto dto) {
         User entity = new User();

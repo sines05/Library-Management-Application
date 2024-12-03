@@ -15,5 +15,6 @@ public class BookDto {
     private String language;
     private String status;
     private AdminDto admin;
+    private int quantity;
 
 }

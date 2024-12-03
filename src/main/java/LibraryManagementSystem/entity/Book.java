@@ -50,4 +50,7 @@ public class Book {
     )
     private List<TransactionDetail> transactionDetails = new ArrayList<>();
 
+    @Column(nullable = false)
+    private int quantity;
+
 }

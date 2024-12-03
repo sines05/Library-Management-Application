@@ -104,6 +104,7 @@ public class BookServiceImpl implements BookService {
         entity.setType(dto.getType());
         entity.setLanguage(dto.getLanguage());
         entity.setStatus(dto.getStatus());
+        entity.setQuantity(dto.getQuantity());
         entity.setAdmin(convertToAdminEntity(dto.getAdmin()));
         return entity;
     }
@@ -115,7 +116,8 @@ public class BookServiceImpl implements BookService {
                 entity.getType(),
                 entity.getLanguage(),
                 entity.getStatus(),
-                convertToAdminDto(entity.getAdmin())
+                convertToAdminDto(entity.getAdmin()),
+                entity.getQuantity()
         );
     }
 
