@@ -45,9 +45,14 @@ public class Book {
 
     @OneToMany(
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY,
+            fetch = FetchType.EAGER,
             mappedBy = "book"
     )
     private List<TransactionDetail> transactionDetails = new ArrayList<>();
 
+    @Column(nullable = false)
+    private int quantity;
+
+    @Column(name = "isbn")
+    private String isbn;
 }

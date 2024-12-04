@@ -27,6 +27,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AddBookPopUpFormController {
+    @FXML
+    private TextField txtQuantity;
+
+    @FXML
+    private Label lblQuantityAlert;
 
     @FXML
     private Pane addPane;
@@ -75,21 +80,62 @@ public class AddBookPopUpFormController {
     @FXML
     void btnAddOnAction(ActionEvent event) {
         if (validateBook()) {
+            String isbn = "";
+            String title = txtName.getText().trim();
+
+            // Lấy ISBN từ sách được chọn trong kết quả tìm kiếm
+            String selectedBookInfo = lstBooks.getSelectionModel().getSelectedItem();
+            if (selectedBookInfo != null) {
+                String selectedBookTitle = selectedBookInfo.split(" - ")[0];
+                Map<String, String> selectedBookDetails = booksDetails.get(selectedBookTitle);
+                if (selectedBookDetails != null) {
+                    isbn = selectedBookDetails.getOrDefault("isbn", "");
+                }
+            }
+
+            // Kiểm tra nếu ISBN trống hoặc không tìm thấy
+            if (isbn.isEmpty()) {
+                showErrorAlert("Không thể thêm sách vào cơ sở dữ liệu vì không tìm thấy ISBN!");
+                return;
+            }
+
+            // Kiểm tra trùng lặp dựa trên ISBN
+            if (bookService.isBookExistsByIsbn(isbn)) {
+                showErrorAlert("Sách với ISBN này đã tồn tại trong cơ sở dữ liệu!");
+                return;
+            }
+
+            int quantity = 0;
+            try {
+                quantity = Integer.parseInt(txtQuantity.getText().trim());
+                if (quantity <= 0) {
+                    lblQuantityAlert.setText("Số lượng phải lớn hơn 0!");
+                    return;
+                }
+            } catch (NumberFormatException e) {
+                lblQuantityAlert.setText("Số lượng phải là một số hợp lệ!");
+                return;
+            }
+
             BookDto bookDto = new BookDto();
-            bookDto.setName(txtName.getText());
+            bookDto.setName(title);
             bookDto.setLanguage(txtLanguage.getText());
             bookDto.setType(txtType.getText());
             bookDto.setAdmin(AdminSignInFormController.admin);
             bookDto.setStatus("Available");
+            bookDto.setQuantity(quantity);
+            bookDto.setIsbn(isbn);
 
             if (bookService.saveBook(bookDto)) {
                 Navigation.closePopUpPane();
                 AdminBookManagementFormController.getInstance().allBookId();
             } else {
-                System.out.println("Unable to save book!");
+                showErrorAlert("Không thể lưu sách!");
             }
         }
     }
+
+
 
     @FXML
     void txtNameOnAction(ActionEvent event) {
@@ -222,7 +268,7 @@ public class AddBookPopUpFormController {
     private boolean validateBook() {
         boolean isValid = true;
 
-        // Chỉ kiểm tra xem các trường có bị trống hay không
+        // Kiểm tra các trường khác
         if (txtName.getText().trim().isEmpty()) {
             lblNameAlert.setText("Tên sách không được để trống!");
             isValid = false;
@@ -238,8 +284,15 @@ public class AddBookPopUpFormController {
             isValid = false;
         }
 
+        // Kiểm tra trường quantity
+        if (txtQuantity.getText().trim().isEmpty()) {
+            lblQuantityAlert.setText("Số lượng không được để trống!");
+            isValid = false;
+        }
+
         return isValid;
     }
+
 
     private void showErrorAlert(String message) {
         System.out.println("ERROR: " + message);
@@ -319,4 +372,17 @@ public class AddBookPopUpFormController {
             lblTypeAlert.setText("Invalid Book Type!!");
         } else lblTypeAlert.setText(" ");
     }
+
+    @FXML
+    void txtQuantityOnAction(ActionEvent event) {
+        btnAddOnAction(event); // Khi nhấn Enter, gọi sự kiện thêm sách
+    }
+
+    @FXML
+    void txtQuantityOnKeyPressed(KeyEvent event) {
+        if (txtQuantity.getText().isEmpty()) {
+            lblQuantityAlert.setText("Invalid Quantity!!");
+        } else lblQuantityAlert.setText(" ");
+    }
+
 }
