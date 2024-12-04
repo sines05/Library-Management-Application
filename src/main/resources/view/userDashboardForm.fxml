@@ -58,7 +58,7 @@
             <children>
                 <ImageView fitHeight="48.0" fitWidth="43.0" layoutX="14.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../../../Downloads/BookWorm-Library-Management-System-main/BookWorm-Library-Management-System-main/src/main/resources/assests/img/beeIcons2.png" />
+                        <Image url="@../assests/img/BEE 2.png" />
                     </image>
                 </ImageView>
                 <Circle fill="#3d3e3e" layoutX="77.0" layoutY="32.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
@@ -126,13 +126,5 @@
                 <Image url="@../assests/img/login1.png" />
             </image>
         </ImageView>
-        <Pane fx:id="pieChartPane" layoutX="655.0" layoutY="21.0" prefHeight="327.0" prefWidth="344.0">
-            <children>
-                <PieChart fx:id="pieChart" prefHeight="333.0" prefWidth="335.0">
-                    <cursor>
-                        <Cursor fx:constant="WAIT" />
-                    </cursor>
-                </PieChart>
-            </children></Pane>
     </children>
 </Pane>

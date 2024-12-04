@@ -121,7 +121,7 @@ public class AdminGlobalFormController implements Initializable {
         buttonUnSelected();
         dashboardButtonSelected = true;
         unSelectedButtons();
-        selectedButton(dashboardPane, lblDashboard, imgDashboard, "dashboardIconBlack.png");
+        selectedButton(dashboardPane, lblDashboard, imgDashboard, "dashboardIconWhite.png");
         Navigation.switchPaging(pagingPane, "adminDashboardForm.fxml");
     }
 
@@ -130,7 +130,7 @@ public class AdminGlobalFormController implements Initializable {
         buttonUnSelected();
         catalogButtonSelected = true;
         unSelectedButtons();
-        selectedButton(catalogPane, lblCatalog, imgCatalog, "catalogIconBlack.png");
+        selectedButton(catalogPane, lblCatalog, imgCatalog, "catalogIconWhite.png");
         Navigation.switchPaging(pagingPane, "adminBorrowedBookForm.fxml");
     }
 
@@ -139,7 +139,7 @@ public class AdminGlobalFormController implements Initializable {
         buttonUnSelected();
         booksButtonSelected = true;
         unSelectedButtons();
-        selectedButton(booksPane, lblBooks, imgBooks, "booksIconBlack.png");
+        selectedButton(booksPane, lblBooks, imgBooks, "booksIconWhite.png");
         Navigation.switchPaging(pagingPane, "adminBookManagementForm.fxml");
     }
 
@@ -148,7 +148,7 @@ public class AdminGlobalFormController implements Initializable {
         buttonUnSelected();
         usersButtonSelected = true;
         unSelectedButtons();
-        selectedButton(usersPane ,lblUsers, imgUsers, "usersIconBlack.png");
+        selectedButton(usersPane ,lblUsers, imgUsers, "usersIconWhite.png");
         Navigation.switchPaging(pagingPane, "adminUserManagementForm.fxml");
     }
 
@@ -157,13 +157,13 @@ public class AdminGlobalFormController implements Initializable {
         buttonUnSelected();
         branchesButtonSelected = true;
         unSelectedButtons();
-        selectedButton(branchesPane, lblBranches, imgBranches, "branchesIconBlack.png");
+        selectedButton(branchesPane, lblBranches, imgBranches, "branchesIconWhite.png");
         Navigation.switchPaging(pagingPane, "adminBranchManagementForm.fxml");
     }
 
     @FXML
     void btnLogOutOnAction(ActionEvent event) throws IOException {
-        selectedButton(logOutPane, lblLogOut, imgLogOut, "logOutIconBlack.png");
+        selectedButton(logOutPane, lblLogOut, imgLogOut, "logOutIconWhite.png");
         Navigation.close(event);
         Navigation.switchNavigation("adminSignInGlobalForm.fxml", event);
     }
@@ -177,7 +177,7 @@ public class AdminGlobalFormController implements Initializable {
     @FXML
     void btnDashboardOnMouseExited(MouseEvent event) {
         if(!dashboardButtonSelected) btnUnselected(dashboardPane,
-                lblDashboard, imgDashboard, "dashboardIconWhite.png");
+                lblDashboard, imgDashboard, "dashboardIconBlack.png");
     }
 
     @FXML
@@ -189,7 +189,7 @@ public class AdminGlobalFormController implements Initializable {
     @FXML
     void btnCatalogOnMouseExited(MouseEvent event) {
         if(!catalogButtonSelected) btnUnselected(catalogPane,
-                lblCatalog, imgCatalog, "catalogIconWhite.png");
+                lblCatalog, imgCatalog, "catalogIconBlack.png");
     }
 
     @FXML
@@ -201,7 +201,7 @@ public class AdminGlobalFormController implements Initializable {
     @FXML
     void btnBooksOnMouseExited(MouseEvent event) {
         if(!booksButtonSelected) btnUnselected(booksPane,
-                lblBooks, imgBooks, "booksIconWhite.png");
+                lblBooks, imgBooks, "booksIconBlack.png");
     }
 
     @FXML
@@ -213,7 +213,7 @@ public class AdminGlobalFormController implements Initializable {
     @FXML
     void btnUsersOnMouseExited(MouseEvent event) {
         if(!usersButtonSelected) btnUnselected(usersPane,
-                lblUsers, imgUsers, "usersIconWhite.png");
+                lblUsers, imgUsers, "usersIconBlack.png");
     }
 
     @FXML
@@ -225,7 +225,7 @@ public class AdminGlobalFormController implements Initializable {
     @FXML
     void btnBranchesOnMouseExited(MouseEvent event) {
         if(!branchesButtonSelected) btnUnselected(branchesPane,
-                lblBranches, imgBranches, "branchesIconWhite.png");
+                lblBranches, imgBranches, "branchesIconBlack.png");
     }
 
     @FXML
@@ -237,7 +237,7 @@ public class AdminGlobalFormController implements Initializable {
     @FXML
     void btnLogOutOnMouseExited(MouseEvent event) {
         if(!logOutButtonSelected) btnUnselected(logOutPane,
-                lblLogOut, imgLogOut, "logOutIconWhite.png");
+                lblLogOut, imgLogOut, "logOutIconBlack.png");
     }
 
     @FXML
@@ -259,11 +259,11 @@ public class AdminGlobalFormController implements Initializable {
     }
 
     private void unSelectedButtons() {
-        btnUnselected(dashboardPane, lblDashboard, imgDashboard, "dashboardIconWhite.png");
-        btnUnselected(catalogPane, lblCatalog, imgCatalog, "catalogIconWhite.png");
-        btnUnselected(booksPane, lblBooks, imgBooks, "booksIconWhite.png");
-        btnUnselected(usersPane, lblUsers, imgUsers, "usersIconWhite.png");
-        btnUnselected(branchesPane, lblBranches, imgBranches, "branchesIconWhite.png");
+        btnUnselected(dashboardPane, lblDashboard, imgDashboard, "dashboardIconBlack.png");
+        btnUnselected(catalogPane, lblCatalog, imgCatalog, "catalogIconBlack.png");
+        btnUnselected(booksPane, lblBooks, imgBooks, "booksIconBlack.png");
+        btnUnselected(usersPane, lblUsers, imgUsers, "usersIconBlack.png");
+        btnUnselected(branchesPane, lblBranches, imgBranches, "branchesIconBlack.png");
     }
 
     private void selectedButton(Pane pane, Label label, ImageView imageView, String path) {
@@ -272,19 +272,20 @@ public class AdminGlobalFormController implements Initializable {
 
     void btnSelected(Pane pane, Label label, ImageView imageView, String path) {
         pane.setStyle(
-                "-fx-background-color: white;" +
+                "-fx-background-color: black;" +
                         "-fx-background-radius: 1px;");
-        label.setStyle("-fx-text-fill: black;" +
+        label.setStyle("-fx-text-fill: white;" +
                 "-fx-font-size: 16px");
         imageView.setImage(new Image("assests/icon/" + path));
     }
 
     void btnUnselected(Pane pane, Label label, ImageView imageView, String path) {
         pane.setStyle(
+                "-fx-background-color: transparent;" +
                 "-fx-background-radius: 1px;");
         label.setStyle("-fx-font-weight: 500;" +
                 "-fx-font-size: 16px;" +
-                "-fx-text-fill: white;");
+                "-fx-text-fill: black;");
         imageView.setImage(new Image("assests/icon/" + path));
     }
 
@@ -323,7 +324,7 @@ public class AdminGlobalFormController implements Initializable {
 
     private void initializeData() {
         dashboardButtonSelected = true;
-        btnSelected(dashboardPane, lblDashboard, imgDashboard, "dashboardIconBlack.png");
+        btnSelected(dashboardPane, lblDashboard, imgDashboard, "dashboardIconWhite.png");
         pagingPane.setVisible(true);
         setAdminName();
         setTimeLine();

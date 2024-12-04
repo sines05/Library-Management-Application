@@ -88,7 +88,7 @@ public class UserGlobalFormController implements Initializable {
         buttonUnSelected();
         dashboardButtonSelected = true;
         unSelectedButtons();
-        selectedButton(dashboardPane, imgDashboard, "dashboardIconBlack.png");
+        selectedButton(dashboardPane, imgDashboard, "dashboardIconWhite.png");
         Navigation.switchPaging(pagingPane, "userDashboardForm.fxml");
     }
 
@@ -97,7 +97,7 @@ public class UserGlobalFormController implements Initializable {
         buttonUnSelected();
         catalogButtonSelected = true;
         unSelectedButtons();
-        selectedButton(catalogPane, imgCatalog, "catalogIconBlack.png");
+        selectedButton(catalogPane, imgCatalog, "catalogIconWhite.png");
         Navigation.switchPaging(pagingPane, "userBorrowedBooksForm.fxml");
     }
 
@@ -106,13 +106,13 @@ public class UserGlobalFormController implements Initializable {
         buttonUnSelected();
         booksButtonSelected = true;
         unSelectedButtons();
-        selectedButton(booksPane, imgBooks, "booksIconBlack.png");
+        selectedButton(booksPane, imgBooks, "booksIconWhite.png");
         Navigation.switchPaging(pagingPane, "userBorrowBooksForm.fxml");
     }
 
     @FXML
     void btnLogOutOnAction(ActionEvent event) throws IOException {
-        selectedButton(logOutPane, imgLogOut, "logOutIconBlack.png");
+        selectedButton(logOutPane, imgLogOut, "logOutIconWhite.png");
         Navigation.close(event);
         Navigation.switchNavigation("userSignInGlobalForm.fxml", event);
     }
@@ -126,7 +126,7 @@ public class UserGlobalFormController implements Initializable {
     @FXML
     void btnDashboardOnMouseExited(MouseEvent event) {
         if(!dashboardButtonSelected) btnUnselected(dashboardPane,
-                imgDashboard, "dashboardIconWhite.png");
+                imgDashboard, "dashboardIconBlack.png");
     }
 
     @FXML
@@ -138,7 +138,7 @@ public class UserGlobalFormController implements Initializable {
     @FXML
     void btnCatalogOnMouseExited(MouseEvent event) {
         if(!catalogButtonSelected) btnUnselected(catalogPane,
-                imgCatalog, "catalogIconWhite.png");
+                imgCatalog, "catalogIconBlack.png");
     }
 
     @FXML
@@ -150,7 +150,7 @@ public class UserGlobalFormController implements Initializable {
     @FXML
     void btnBooksOnMouseExited(MouseEvent event) {
         if(!booksButtonSelected) btnUnselected(booksPane,
-                imgBooks, "booksIconWhite.png");
+                imgBooks, "booksIconBlack.png");
     }
 
     @FXML
@@ -162,7 +162,7 @@ public class UserGlobalFormController implements Initializable {
     @FXML
     void btnLogOutOnMouseExited(MouseEvent event) {
         if(!logOutButtonSelected) btnUnselected(logOutPane,
-                imgLogOut, "logOutIconWhite.png");
+                imgLogOut, "logOutIconBlack.png");
     }
 
     @FXML
@@ -182,9 +182,9 @@ public class UserGlobalFormController implements Initializable {
     }
 
     private void unSelectedButtons() {
-        btnUnselected(dashboardPane, imgDashboard, "dashboardIconWhite.png");
-        btnUnselected(catalogPane, imgCatalog, "catalogIconWhite.png");
-        btnUnselected(booksPane, imgBooks, "booksIconWhite.png");
+        btnUnselected(dashboardPane, imgDashboard, "dashboardIconBlack.png");
+        btnUnselected(catalogPane, imgCatalog, "catalogIconBlack.png");
+        btnUnselected(booksPane, imgBooks, "booksIconBlack.png");
     }
 
     private void selectedButton(Pane pane, ImageView imageView, String path) {
@@ -193,13 +193,14 @@ public class UserGlobalFormController implements Initializable {
 
     void btnSelected(Pane pane, ImageView imageView, String path) {
         pane.setStyle(
-                "-fx-background-color: white;" +
+                "-fx-background-color: black;" +
                         "-fx-background-radius: 1px;");
         imageView.setImage(new Image("assests/icon/" + path));
     }
 
     void btnUnselected(Pane pane, ImageView imageView, String path) {
         pane.setStyle(
+                "-fx-background-color: transparent;" +
                 "-fx-background-radius: 1px;");
         imageView.setImage(new Image("assests/icon/" + path));
     }
@@ -234,7 +235,7 @@ public class UserGlobalFormController implements Initializable {
 
     private void initializeValues() {
         dashboardButtonSelected = true;
-        btnSelected(dashboardPane, imgDashboard, "dashboardIconBlack.png");
+        btnSelected(dashboardPane, imgDashboard, "dashboardIconWhite.png");
         pagingPane.setVisible(true);
         setUserName();
         setTimeLine();
