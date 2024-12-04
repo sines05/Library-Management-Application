@@ -17,5 +17,7 @@ public class BookDto {
     private AdminDto admin;
     private int quantity;
     private String isbn;
+    private String author;
+
 
 }

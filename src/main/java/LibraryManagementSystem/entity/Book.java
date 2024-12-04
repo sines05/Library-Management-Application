@@ -55,4 +55,12 @@ public class Book {
 
     @Column(name = "isbn")
     private String isbn;
+
+    @Column(name = "author", nullable = true)
+    private String author;
+
+    @Override
+    public String toString() {
+        return id + name + type + language + author;
+    }
 }
