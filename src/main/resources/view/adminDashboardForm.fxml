@@ -19,7 +19,7 @@
          <children>
             <ImageView fitHeight="51.0" fitWidth="63.0" layoutX="23.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assests/img/bookWormBadge.png" />
+                  <Image url="@../assests/img/BEE 2.png" />
                </image>
             </ImageView>
             <Circle fill="#3d3e3e" layoutX="136.0" layoutY="44.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
@@ -77,7 +77,7 @@
       </Pane>
       <Pane layoutX="665.0" layoutY="320.0" prefHeight="318.0" prefWidth="331.0" style="-fx-background-color: white; -fx-background-radius: 12;">
          <children>
-            <Label layoutX="78.0" layoutY="14.0" text="BookWorm Admins">
+            <Label layoutX="78.0" layoutY="14.0" text="BeeHive Admins">
                <font>
                   <Font size="22.0" />
                </font>
@@ -93,7 +93,7 @@
          <children>
             <ImageView fitHeight="98.0" fitWidth="187.0" layoutX="25.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assests/img/bookWormLogoBlack.png" />
+                  <Image url="@../assests/img/login1.png" />
                </image>
             </ImageView>
             <Text layoutX="24.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot; Discover worlds, broaden minds &quot;" wrappingWidth="187.0">
