@@ -1,94 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="709.0" prefWidth="1218.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.admin.AdminGlobalFormController">
+<AnchorPane prefHeight="709.0" prefWidth="1218.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.admin.AdminGlobalFormController">
     <children>
         <Pane layoutY="-3.0" prefHeight="719.0" prefWidth="225.0" style="-fx-background-color: #FFEC8B;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-3.0">
             <children>
-                <Pane fx:id="catalogPane" layoutY="226.0" prefHeight="48.0" prefWidth="222.7" style="-fx-background-color: black;">
+                <ImageView fitHeight="90.73" fitWidth="152.38" layoutX="57.0" layoutY="35.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/img/BEE 2.png" />
+                    </image>
+                </ImageView>
+                <Pane fx:id="catalogPane" layoutY="226.0" prefHeight="48.0" prefWidth="222.7" >
                     <children>
-                        <Label fx:id="lblCatalog" layoutX="85.0" layoutY="15.0" text="Catalog" textFill="WHITE">
+                        <Label fx:id="lblCatalog" layoutX="85.0" layoutY="15.0" text="Catalog" textFill="black">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
                         <ImageView fx:id="imgCatalog" fitHeight="24.0" fitWidth="24.0" layoutX="41.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../assests/icon/catalogIconWhite.png" />
+                                <Image url="@../assests/icon/catalogIconBlack.png" />
                             </image>
                         </ImageView>
                     </children></Pane>
-                <Pane fx:id="dashboardPane" layoutY="158.0" prefHeight="48.0" prefWidth="222.7" style="-fx-background-color: black;">
+                <Pane fx:id="dashboardPane" layoutY="158.0" prefHeight="48.0" prefWidth="222.7" >
                     <children>
-                        <Label fx:id="lblDashboard" layoutX="85.0" layoutY="15.0" text="Dashboard" textFill="WHITE">
+                        <Label fx:id="lblDashboard" layoutX="85.0" layoutY="15.0" text="Dashboard" textFill="black">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
                         <ImageView fx:id="imgDashboard" fitHeight="24.0" fitWidth="24.0" layoutX="41.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../assests/icon/dashboardIconWhite.png" />
+                                <Image url="@../assests/icon/dashboardIconBlack.png" />
                             </image>
                         </ImageView>
                     </children>
                 </Pane>
-                <Pane fx:id="booksPane" layoutY="294.0" prefHeight="48.0" prefWidth="222.7" style="-fx-background-color: black;">
+                <Pane fx:id="booksPane" layoutY="294.0" prefHeight="48.0" prefWidth="222.7" >
                     <children>
-                        <Label fx:id="lblBooks" layoutX="85.0" layoutY="15.0" text="Books" textFill="WHITE">
+                        <Label fx:id="lblBooks" layoutX="85.0" layoutY="15.0" text="Books" textFill="black">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
                         <ImageView fx:id="imgBooks" fitHeight="24.0" fitWidth="24.0" layoutX="41.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../assests/icon/booksIconWhite.png" />
+                                <Image url="@../assests/icon/booksIconBlack.png" />
                             </image>
                         </ImageView>
                     </children></Pane>
-                <Pane fx:id="usersPane" layoutY="362.0" prefHeight="48.0" prefWidth="222.7" style="-fx-background-color: black;">
+                <Pane fx:id="usersPane" layoutY="362.0" prefHeight="48.0" prefWidth="222.7" >
                     <children>
-                        <Label fx:id="lblUsers" layoutX="85.0" layoutY="15.0" text="Users" textFill="WHITE">
+                        <Label fx:id="lblUsers" layoutX="85.0" layoutY="15.0" text="Users" textFill="black">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
                         <ImageView fx:id="imgUsers" fitHeight="24.0" fitWidth="24.0" layoutX="41.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../assests/icon/usersIconWhite.png" />
+                                <Image url="@../assests/icon/usersIconBlack.png" />
                             </image>
                         </ImageView>
                     </children></Pane>
-                <Pane fx:id="branchesPane" layoutY="430.0" prefHeight="48.0" prefWidth="222.7" style="-fx-background-color: #000000;">
+                <Pane fx:id="branchesPane" layoutY="430.0" prefHeight="48.0" prefWidth="222.7" >
                     <children>
-                        <Label fx:id="lblBranches" layoutX="85.0" layoutY="15.0" text="Branches" textFill="WHITE">
+                        <Label fx:id="lblBranches" layoutX="85.0" layoutY="15.0" text="Branches" textFill="black">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
                         <ImageView fx:id="imgBranches" fitHeight="24.0" fitWidth="24.0" layoutX="41.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../assests/icon/branchesIconWhite.png" />
+                                <Image url="@../assests/icon/branchesIconBlack.png" />
                             </image>
                         </ImageView>
                     </children></Pane>
-                <Pane fx:id="logOutPane" layoutX="-3.0" layoutY="501.0" prefHeight="48.0" prefWidth="222.7" style="-fx-background-color: black;">
+                <Pane fx:id="logOutPane" layoutX="-3.0" layoutY="501.0" prefHeight="48.0" prefWidth="222.7" >
                     <children>
-                        <Label fx:id="lblLogOut" layoutX="85.0" layoutY="15.0" text="Log Out" textFill="WHITE">
+                        <Label fx:id="lblLogOut" layoutX="85.0" layoutY="15.0" text="Log Out" textFill="black">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
                         <ImageView fx:id="imgLogOut" fitHeight="24.0" fitWidth="24.0" layoutX="41.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../assests/icon/logOutIconWhite.png" />
+                                <Image url="@../assests/icon/logOutIconBlack.png" />
                             </image>
                         </ImageView>
                         <JFXButton layoutY="4.0" minHeight="40.0" onAction="#btnLogOutOnAction" onMouseEntered="#btnLogOutOnMouseEntered" onMouseExited="#btnLogOutOnMouseExited" prefHeight="40.0" prefWidth="225.0" text=" " />
