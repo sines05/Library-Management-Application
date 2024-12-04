@@ -20,7 +20,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class AdminDashboardFormController implements Initializable {
+public class AdminDashboardFormController {
 
     @FXML
     private Label lblTotalBookCount;
@@ -143,9 +143,5 @@ public class AdminDashboardFormController implements Initializable {
         allOverDueBorrowers();
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        setData();
-    }
 
 }
