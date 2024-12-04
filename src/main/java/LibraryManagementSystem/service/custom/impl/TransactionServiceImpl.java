@@ -240,6 +240,7 @@ public class TransactionServiceImpl implements TransactionService {
                 entity.getStatus(),
                 convertToAdminDto(entity.getAdmin()),
                 entity.getQuantity(),
+                entity.getIsbn(),
                 entity.getIsbn()
         );
     }

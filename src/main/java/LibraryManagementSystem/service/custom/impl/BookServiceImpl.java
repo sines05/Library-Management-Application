@@ -28,7 +28,9 @@ public class BookServiceImpl implements BookService {
             e.printStackTrace();
             return false;
         } finally {
-            session.close();
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
         }
     }
 
@@ -145,6 +147,7 @@ public class BookServiceImpl implements BookService {
         entity.setQuantity(dto.getQuantity());
         entity.setAdmin(convertToAdminEntity(dto.getAdmin()));
         entity.setIsbn(dto.getIsbn());
+        entity.setAuthor(dto.getAuthor());
         return entity;
     }
 
@@ -157,7 +160,8 @@ public class BookServiceImpl implements BookService {
                 entity.getStatus(),
                 convertToAdminDto(entity.getAdmin()),
                 entity.getQuantity(),
-                entity.getIsbn()
+                entity.getIsbn(),
+                entity.getAuthor()
         );
     }
 
