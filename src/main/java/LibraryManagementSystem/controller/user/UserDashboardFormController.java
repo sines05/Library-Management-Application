@@ -20,7 +20,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class UserDashboardFormController implements Initializable {
+public class UserDashboardFormController {
 
     @FXML
     private Pane availableBookPane;
@@ -134,11 +134,6 @@ public class UserDashboardFormController implements Initializable {
                 new PieChart.Data("Total Borrowed Books", totalBorrowedBookCount),
                 new PieChart.Data("Total Returned Books", totalReturnedBookCount)
         );
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        setPieChart();
     }
 
 }
