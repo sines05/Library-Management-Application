@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="575.0" prefWidth="930.0" style="-fx-background-color: #FFEC8B;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.admin.AdminSignInFormController">
+<AnchorPane prefHeight="575.0" prefWidth="930.0" style="-fx-background-color: #FFEC8B;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.admin.AdminSignInFormController">
     <children>
         <TextField fx:id="txtUsername" layoutX="96.0" layoutY="255.0" onAction="#txtUsernameOnAction" onKeyPressed="#txtUsernameOnKeyPressed" prefHeight="42.0" prefWidth="267.0" promptText="  Username" style="-fx-border-color: #727374; -fx-border-radius: 12px; -fx-background-color: white; -fx-background-radius: 12px;">
             <font>
@@ -32,9 +27,9 @@
         </PasswordField>
         <Pane layoutX="461.6" prefHeight="575.0" prefWidth="469.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 40 0 0 40;">
             <children>
-                <ImageView fitHeight="157.41" fitWidth="264.38" layoutX="106.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="157.41" fitWidth="264.38" layoutX="144.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../assests/img/bookWormLogoSignIn.png" />
+                        <Image url="@../assests/img/login1.png" />
                     </image>
                     <cursor>
                         <Cursor fx:constant="WAIT" />
@@ -55,7 +50,7 @@
         </Pane>
         <ImageView fitHeight="60.8" fitWidth="72.6" layoutX="194.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../assests/img/bookWormBadge.png" />
+                <Image url="@../assests/img/BEE 2.png" />
             </image>
         </ImageView>
         <Label layoutX="102.0" layoutY="137.0" text="Welcome Back !!">
