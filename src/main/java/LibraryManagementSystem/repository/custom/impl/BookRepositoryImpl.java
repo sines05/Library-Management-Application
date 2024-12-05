@@ -23,10 +23,16 @@ public class BookRepositoryImpl implements BookRepository {
 
     @Override
     public void save(Book entity) {
-        // Kiểm tra xem id đã tồn tại chưa trước khi lưu
+        // Check if a book with the same ISBN already exists
+        if (getBookByIsbn(entity.getIsbn()) != null) {
+            throw new IllegalArgumentException("A book with this ISBN already exists.");
+        }
+
+        // Check if the ID already exists as a fallback
         if (getData(entity.getId()) != null) {
             throw new IllegalArgumentException("Book ID already exists.");
         }
+
         session.save(entity);
     }
 

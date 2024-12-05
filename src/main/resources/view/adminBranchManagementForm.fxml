@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<Pane prefHeight="643.0" prefWidth="945.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.admin.AdminBranchManagementFormController">
+<Pane prefHeight="643.0" prefWidth="945.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.admin.AdminBranchManagementFormController">
     <children>
         <Pane layoutX="15.0" layoutY="92.0" prefHeight="544.0" prefWidth="922.0" style="-fx-background-color: white; -fx-background-radius: 12px;">
             <children>
@@ -49,7 +43,7 @@
                 </HBox>
                 <ScrollPane layoutX="21.0" layoutY="75.0" prefHeight="463.0" prefWidth="888.0" style="-fx-background-color: white;">
                     <content>
-                        <VBox fx:id="vBoxBranchManage" prefHeight="454.0" prefWidth="864.0" style="-fx-background-color: white;" />
+                        <VBox fx:id="vBoxBranchManage" prefHeight="5000.0" prefWidth="864.0" style="-fx-background-color: white;" />
                     </content>
                 </ScrollPane>
                 <Pane layoutX="886.0" layoutY="75.0" prefHeight="463.0" prefWidth="22.0" style="-fx-background-color: white;" />
@@ -67,7 +61,6 @@
                         <Font size="16.0" />
                     </font>
                 </TextField>
-                <JFXButton layoutX="60.0" layoutY="1.0" onAction="#btnAddBranchOnAction" onMouseEntered="#btnAddBranchOnMouseEntered" onMouseExited="#btnAddBranchOnMouseExited" prefHeight="44.0" prefWidth="192.0" style="-fx-background-radius: 12;" text=" " />
             </children>
         </Pane>
         <Text layoutX="37.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Branch Management">
@@ -89,6 +82,7 @@
                 </ImageView>
             </children>
         </Pane>
+        <JFXButton layoutX="464.0" layoutY="32.0" onAction="#btnAddBranchOnAction" onMouseEntered="#btnAddBranchOnMouseEntered" onMouseExited="#btnAddBranchOnMouseExited" prefHeight="44.0" prefWidth="136.0" style="-fx-background-radius: 12;" text=" " />
         <Label fx:id="lblSearchAlert" layoutX="611.0" layoutY="71.0" prefHeight="16.0" prefWidth="3.0" textFill="RED">
             <font>
                 <Font size="11.0" />
