@@ -86,6 +86,7 @@ public class UserReturnBookConfirmPopUpFormController implements Initializable {
         updatedTransactionDto.setUser(UserSignInFormController.user);
 
         if (transactionService.updateTransaction(updatedTransactionDto)) {
+            booksToBeReturned.clear();
             Navigation.closeUserPopUpLargePane();
             UserBorrowedBooksFormController.getInstance().allBorrowedTransactionId();
             //AdminBorrowedBookFormController.getInstance().allBorrowedTransactionId();
