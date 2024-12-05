@@ -9,7 +9,7 @@ public class RegExPatterns {
     }
 
     public static boolean contactNoPattern(String contactNo) {
-        return !Pattern.matches("(0\\d{9})", contactNo);
+        return !Pattern.matches("0\\d{9}", contactNo);
     }
 
     public static boolean emailPattern(String email) {
