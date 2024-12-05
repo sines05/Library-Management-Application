@@ -6,11 +6,11 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white; -fx-background-radius: 12;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.user.UserReturnBookConfirmPopUpFormController">
+<Pane layoutX="-120" layoutY="-50" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: white; -fx-background-radius: 12;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.user.UserReturnBookConfirmPopUpFormController">
     <children>
-        <Pane layoutX="26.0" layoutY="25.0" prefHeight="380.0" prefWidth="750.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-border-color: #E8E8E8; -fx-border-radius: 12;">
+        <Pane layoutX="26.0" layoutY="25.0" prefHeight="380.0" prefWidth="909.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-border-color: #E8E8E8; -fx-border-radius: 12;">
             <children>
-                <Line endX="610.0" endY="1" layoutX="118.0" layoutY="54.0" startX="-91.00001525878906" startY="0.9999923706054688" stroke="#e8e8e8" />
+                <Line endX="762.0" endY="0.9999923706054688" layoutX="118.0" layoutY="54.0" startX="-91.00001525878906" startY="0.9999923706054688" stroke="#e8e8e8" />
                 <Label layoutX="60.0" layoutY="24.0" text="Book ID">
                     <font>
                         <Font size="15.0" />
@@ -31,9 +31,14 @@
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <ScrollPane layoutX="10.0" layoutY="57.0" prefHeight="320.0" prefWidth="737.0" style="-fx-background-color: white;">
+                <Label layoutX="770" layoutY="24.0" text="Author">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <ScrollPane layoutX="10.0" layoutY="57.0" prefHeight="320.0" prefWidth="889.0" style="-fx-background-color: white;">
                     <content>
-                        <VBox fx:id="vBox" prefHeight="495.0" prefWidth="1035.0" style="-fx-background-color: white;" />
+                        <VBox fx:id="vBox" prefHeight="1000.0" prefWidth="1010.0" style="-fx-background-color: white;" />
                     </content>
                 </ScrollPane>
             </children>
@@ -73,7 +78,7 @@
                 <Line endX="5.5" endY="43.0" layoutX="65.0" layoutY="63.0" startX="5.5" startY="-48.0" />
             </children>
         </Pane>
-        <Pane fx:id="returnPane" layoutX="600.0" layoutY="470.0" prefHeight="54.0" prefWidth="180.0" style="-fx-background-color: black; -fx-background-radius: 10;">
+        <Pane fx:id="returnPane" layoutX="700.0" layoutY="470.0" prefHeight="54.0" prefWidth="180.0" style="-fx-background-color: black; -fx-background-radius: 10;">
             <children>
                 <Label fx:id="lblReturn" layoutX="60.0" layoutY="17.0" text="RETURN" textFill="WHITE">
                     <font>
@@ -83,7 +88,7 @@
                 <JFXButton onAction="#btnReturnOnAction" onMouseEntered="#btnReturnOnMouseEntered" onMouseExited="#btnReturnOnMouseExited" prefHeight="54.0" prefWidth="180.0" style="-fx-background-radius: 10;" text=" " />
             </children>
         </Pane>
-        <Pane fx:id="cancelPane" layoutX="400.0" layoutY="470.0" prefHeight="54.0" prefWidth="180.0" style="-fx-background-color: #D7D7D7; -fx-background-radius: 10;">
+        <Pane fx:id="cancelPane" layoutX="500.0" layoutY="470.0" prefHeight="54.0" prefWidth="180.0" style="-fx-background-color: #D7D7D7; -fx-background-radius: 10;">
             <children>
                 <Label fx:id="lblCancel" layoutX="60.0" layoutY="17.0" text="CANCEL">
                     <font>
@@ -93,7 +98,7 @@
                 <JFXButton layoutX="-1.0" onAction="#btnCancelOnAction" onMouseEntered="#btnCancelOnMouseEntered" onMouseExited="#btnCancelOnMouseExited" prefHeight="54.0" prefWidth="180.0" style="-fx-background-radius: 10;" text=" " />
             </children>
         </Pane>
-        <Pane layoutX="753.0" layoutY="76.0" prefHeight="325.0" prefWidth="20.6" style="-fx-background-color: white; -fx-background-radius: 0 0 12 0;" />
-        <Pane layoutX="28.0" layoutY="380.0" prefHeight="20" prefWidth="740.0" style="-fx-background-color: white; -fx-background-radius: 0 0 12 0;" />
+        <Pane layoutX="906.0" layoutY="76.0" prefHeight="325.0" prefWidth="20.6" style="-fx-background-color: white; -fx-background-radius: 0 0 12 0;" />
+        <Pane layoutX="28.0" layoutY="380.0" prefHeight="20" prefWidth="889.0" style="-fx-background-color: white; -fx-background-radius: 0 0 12 0;" />
     </children>
 </Pane>
