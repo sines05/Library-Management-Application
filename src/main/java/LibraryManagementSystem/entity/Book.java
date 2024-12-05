@@ -57,7 +57,7 @@ public class Book {
     private String isbn;
 
     @Column(name = "author", nullable = true)
-    private String author;
+    private String author = "Unknown";
 
     @Override
     public String toString() {
