@@ -103,7 +103,7 @@ public class AdminDashboardFormController implements Initializable {
         pieChart = new PieChart(pieChartData); /* Create a pie chart with the data */
 
         pieChart.getData().get(0).getNode().setStyle(
-                "-fx-pie-color: #3D3E3E;" +
+                "-fx-pie-color:#3D3E3E ;" +
                         "-fx-border-color: transaparent");
         pieChart.getData().get(1).getNode().setStyle(
                 "-fx-pie-color: #ffec8b;" +

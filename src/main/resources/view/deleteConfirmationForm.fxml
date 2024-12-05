@@ -47,9 +47,9 @@
             </children>
         </Pane>
         <JFXButton layoutX="184.0" layoutY="302.0" onAction="#btnConfirmOnAction" onMouseEntered="#btnConfirmOnMouseEntered" onMouseExited="#btnConfirmOnMouseExited" prefHeight="54.0" prefWidth="259.0" style="-fx-background-radius: 10;" text=" " />
-        <Text layoutX="146.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Are you sure you want to delete your account?&quot;" wrappingWidth="500.0">
+        <Text layoutX="120.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Are you certain you wish to proceed with the deletion of the selected entry?&quot;" wrappingWidth="400.0">
             <font>
-                <Font size="18.0" />
+                <Font size="19.0" />
             </font>
         </Text>
     </children>
