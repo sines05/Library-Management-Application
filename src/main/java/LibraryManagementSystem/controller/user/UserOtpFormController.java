@@ -101,7 +101,7 @@ public class UserOtpFormController implements Initializable {
         otp = Utility.generateOTP();
         try {
             String email = UserForgotPasswordFormController.user.getEmail();
-            String subject = "BookWorm: OTP Verification";
+            String subject = "Beehive: OTP Verification";
             String body = otp + " is your OTP verification code.";
 
             String[] detail = {email, subject, body};
