@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<Pane prefHeight="642.0" prefWidth="1171.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.user.UserBorrowBooksFormController">
+<Pane prefHeight="642.0" prefWidth="1171.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.user.UserBorrowBooksFormController">
    <children>
       <JFXButton layoutX="-36.0" layoutY="32.0" text=" " />
       <Pane layoutX="1091.0" prefHeight="642.0" prefWidth="82.0" style="-fx-background-color: #FFEB8C; -fx-background-radius: 12 0 0 0;">
          <children>
-            <Text fill="WHITE" layoutX="19.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      BEEHIVE" wrappingWidth="22.31420900038222">
+            <Text fill="WHITE" layoutX="19.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B E E H I V E" wrappingWidth="22">
                <font>
                   <Font size="26.0" />
                </font>
@@ -73,23 +67,25 @@
                   </Label>
                </children>
             </HBox>
-            <ScrollPane layoutX="21.0" layoutY="75.0" prefHeight="465.0" prefWidth="1003.0" style="-fx-background-color: white;">
+            <ScrollPane layoutX="21.0" layoutY="75.0" prefHeight="465.0" prefWidth="1030.0" style="-fx-background-color: white;">
                <content>
-                  <VBox fx:id="vBoxBooks" prefHeight="459.0" prefWidth="1003.0" style="-fx-background-color: white;" />
+                  <VBox fx:id="vBoxBooks" prefHeight="10000.0" prefWidth="1025.0" style="-fx-background-color: white;" />
                </content>
             </ScrollPane>
+            <Pane layoutX="1030.0" layoutY="73.0" prefHeight="465.0" prefWidth="20.0" style="-fx-background-color: white;" />
+            <Pane layoutX="25.0" layoutY="523.0" prefHeight="17.0" prefWidth="1020.0" style="-fx-background-color: white;" />
          </children>
       </Pane>
-      <Pane fx:id="AcquireBookPane" layoutX="457.0" layoutY="32.0" prefHeight="44.0" prefWidth="136.0" style="-fx-background-color: black; -fx-background-radius: 12;">
+      <Pane fx:id="AcquireBookPane" layoutX="561.0" layoutY="32.0" prefHeight="44.0" prefWidth="136.0" style="-fx-background-color: black; -fx-background-radius: 12;">
          <children>
-            <ImageView fx:id="imgAcquire" fitHeight="24.0" fitWidth="24.0" layoutX="3.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgAcquire" fitHeight="24.0" fitWidth="24.0" layoutX="9.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assests/icon/addIconWhite.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="searchPane" layoutX="606.0" layoutY="31.0" prefHeight="46.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 12;">
+      <Pane fx:id="searchPane" layoutX="714.0" layoutY="31.0" prefHeight="46.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 12;">
          <children>
             <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="13.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -103,8 +99,8 @@
             </TextField>
          </children>
       </Pane>
-      <Pane fx:id="btnRefreshPane" layoutX="973.0" layoutY="34.0" prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: white; -fx-background-radius: 12;" />
-      <JFXButton layoutX="973.0" layoutY="31.0" onAction="#btnRefreshTableOnAction" onMouseEntered="#btnRefreshTableOnMouseEntered" onMouseExited="#btnRefreshTableOnMouseExited" prefHeight="46.0" prefWidth="46.0" style="-fx-background-radius: 12;" text=" ">
+      <Pane fx:id="btnRefreshPane" layoutX="1029.0" layoutY="34.0" prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: white; -fx-background-radius: 12;" />
+      <JFXButton layoutX="1029.0" layoutY="35.0" onAction="#btnRefreshTableOnAction" onMouseEntered="#btnRefreshTableOnMouseEntered" onMouseExited="#btnRefreshTableOnMouseExited" prefHeight="46.0" prefWidth="46.0" style="-fx-background-radius: 12;" text=" ">
          <font>
             <Font size="16.0" />
          </font>
@@ -117,16 +113,16 @@
             <Font size="11.0" />
          </font>
       </Label>
-      <Label fx:id="lblAcquire" layoutX="498.0" layoutY="42.0" text="Acquire" textFill="WHITE">
+      <Label fx:id="lblAcquire" layoutX="616.0" layoutY="44.0" text="Acquire" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="984.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="1040.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assests/icon/refreshTableIcon.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="457.0" layoutY="32.0" onAction="#btnAcquireBookOnAction" onMouseEntered="#btnAcquireBookOnMouseEntered" onMouseExited="#btnAcquireBookOnMouseExited" prefHeight="44.0" prefWidth="136.0" style="-fx-background-radius: 12;" text=" " />
+      <JFXButton layoutX="561.0" layoutY="32.0" onAction="#btnAcquireBookOnAction" onMouseEntered="#btnAcquireBookOnMouseEntered" onMouseExited="#btnAcquireBookOnMouseExited" prefHeight="44.0" prefWidth="136.0" style="-fx-background-radius: 12;" text=" " />
    </children>
 </Pane>

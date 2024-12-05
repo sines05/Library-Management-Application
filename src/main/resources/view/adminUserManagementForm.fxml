@@ -7,40 +7,40 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<Pane prefHeight="905.0" prefWidth="995.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.admin.AdminUserManagementFormController">
+<Pane prefHeight="905.0" prefWidth="995.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.admin.AdminUserManagementFormController">
     <children>
         <Pane layoutX="15.0" layoutY="96.0" prefHeight="795.0" prefWidth="972.0" style="-fx-background-color: white; -fx-background-radius: 12px;">
             <children>
                 <Line endX="838.0" layoutX="121.0" layoutY="71.0" startX="-100.0" strokeType="OUTSIDE" />
                 <ScrollPane layoutX="21.0" layoutY="98.0" prefHeight="699.0" prefWidth="940.0" style="-fx-background-color: white;">
                     <content>
-                        <VBox fx:id="vBoxUserManage" prefHeight="717.0" prefWidth="939.0" style="-fx-background-color: white;" />
+                        <VBox fx:id="vBoxUserManage" prefHeight="5000" prefWidth="939.0" style="-fx-background-color: white;" />
                     </content>
                 </ScrollPane>
-                <Pane layoutX="964.0" layoutY="75.0" prefHeight="717.0" prefWidth="5.0" style="-fx-background-color: white;" />
-                <HBox alignment="CENTER_LEFT" layoutX="33.0" layoutY="-7.0" prefHeight="60.0" prefWidth="934.0" spacing="20">
+                <Pane layoutX="964.0" layoutY="73.0" prefHeight="717.0" prefWidth="5.0" style="-fx-background-color: white;" />
+                <HBox alignment="CENTER_LEFT" layoutX="19.0" layoutY="10.0" prefHeight="60.0" prefWidth="934.0" spacing="20">
                     <children>
-                        <Label prefHeight="20.0" prefWidth="98.0" text="ID">
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="94.0" text="ID">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
-                        <Label prefHeight="20.0" prefWidth="185.0" text="Name">
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="166.0" text="Name">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
-                        <Label prefHeight="20.0" prefWidth="177.0" text="Email">
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="177.0" text="Email">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
-                        <Label prefHeight="20.0" prefWidth="248.0" text="Username">
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="248.0" text="Username">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Label>
-                        <Label prefHeight="20.0" prefWidth="124.0" text="Action">
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="124.0" text="Action">
                             <font>
                                 <Font size="16.0" />
                             </font>
@@ -83,6 +83,8 @@
             </children>
         </Pane>
         <JFXButton layoutX="530.0" layoutY="23.0" onAction="#btnAddUserOnAction" onMouseEntered="#btnAddUserOnMouseEntered" onMouseExited="#btnAddUserOnMouseExited" prefHeight="44.0" prefWidth="136.0" style="-fx-background-radius: 12;" text=" " />
+        <Pane layoutX="960.0" layoutY="190.0" prefHeight="699.0" prefWidth="21.0" style="-fx-background-color: white; -fx-background-radius: 0 0 12 0" />
+        <Pane layoutX="40.0" layoutY="870.0" prefHeight="21.0" prefWidth="940.0" style="-fx-background-color: white; -fx-background-radius: 0 0 12 0" />
         <Label fx:id="lblSearchAlert" layoutX="568.0" layoutY="35.0" prefHeight="14.0" prefWidth="0.0" textFill="RED">
             <font>
                 <Font size="1.0" />

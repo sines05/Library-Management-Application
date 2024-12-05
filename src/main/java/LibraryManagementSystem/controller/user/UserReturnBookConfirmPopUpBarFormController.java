@@ -20,6 +20,9 @@ public class UserReturnBookConfirmPopUpBarFormController {
     @FXML
     private Label lblType;
 
+    @FXML
+    private Label lblAuthor;
+
     BookService bookService =
             (BookService) ServiceFactory.getInstance()
                     .getService(ServiceFactory.ServiceTypes.BOOK);
@@ -31,6 +34,7 @@ public class UserReturnBookConfirmPopUpBarFormController {
         lblName.setText(bookDto.getName());
         lblType.setText(bookDto.getType());
         lblLanguage.setText(bookDto.getLanguage());
+        lblAuthor.setText(bookDto.getAuthor());
     }
 
 }
