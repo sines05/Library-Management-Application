@@ -28,6 +28,9 @@ public class UserBorrowBooksBarFormController {
     @FXML
     private CheckBox checkBox;
 
+    @FXML
+            private Label lblAuthor;
+
     BookService bookService =
             (BookService) ServiceFactory.getInstance()
                     .getService(ServiceFactory.ServiceTypes.BOOK);
@@ -52,6 +55,7 @@ public class UserBorrowBooksBarFormController {
         lblType.setText(bookDto.getType());
         lblLanguage.setText(bookDto.getLanguage());
         lblAvailability.setText(String.valueOf(bookDto.getStatus())); // Hiển thị số lượng sách hiện có
+        lblAuthor.setText(bookDto.getAuthor());
 
         if (bookDto.getQuantity() <= 0) {
             checkBox.setVisible(false); // Ẩn checkbox nếu sách không có sẵn

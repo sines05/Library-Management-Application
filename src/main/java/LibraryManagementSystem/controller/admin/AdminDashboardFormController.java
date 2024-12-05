@@ -20,7 +20,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class AdminDashboardFormController {
+public class AdminDashboardFormController implements Initializable {
 
     @FXML
     private Label lblTotalBookCount;
@@ -103,16 +103,16 @@ public class AdminDashboardFormController {
         pieChart = new PieChart(pieChartData); /* Create a pie chart with the data */
 
         pieChart.getData().get(0).getNode().setStyle(
-                "-fx-pie-color: #3D3E3E;" +
+                "-fx-pie-color:#3D3E3E ;" +
                         "-fx-border-color: transaparent");
         pieChart.getData().get(1).getNode().setStyle(
-                "-fx-pie-color: #151619;" +
+                "-fx-pie-color: #ffec8b;" +
                         "-fx-border-color: transaparent");
         pieChart.setLabelLineLength(0);
         pieChart.setLabelsVisible(false);
         pieChart.setLegendVisible(false);
         pieChart.setClockwise(true);
-        pieChart.setPrefSize(630, 630);
+        pieChart.setPrefSize(350, 350);
 
         pieChartPane.getChildren().add(pieChart);
     }
@@ -142,6 +142,9 @@ public class AdminDashboardFormController {
         allAdmins();
         allOverDueBorrowers();
     }
-
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        setData();
+    }
 
 }

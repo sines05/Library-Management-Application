@@ -56,7 +56,7 @@ public class Book {
     @Column(name = "isbn")
     private String isbn;
 
-    @Column(name = "author", nullable = true)
+    @Column(name = "author", nullable = false, updatable = false)
     private String author;
 
     @Override

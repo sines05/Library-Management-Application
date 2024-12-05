@@ -50,7 +50,7 @@
         </Pane>
         <ImageView fitHeight="60.8" fitWidth="72.6" layoutX="194.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../assests/img/bookWormBadge.png" />
+                <Image url="@../assests/img/BEE 2.png" />
             </image>
         </ImageView>
         <Label layoutX="120.0" layoutY="146.0" text="Welcome Back !!">

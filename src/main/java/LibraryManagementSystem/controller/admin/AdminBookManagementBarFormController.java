@@ -37,6 +37,9 @@ public class AdminBookManagementBarFormController {
     @FXML
     private Label lblType;
 
+    @FXML
+    private Label lblAuthor;
+
     private BookDto bookDto;
 
     public static int bookId;
@@ -106,6 +109,7 @@ public class AdminBookManagementBarFormController {
         lblType.setText(bookDto.getType());
         lblLanguage.setText(bookDto.getLanguage());
         lblAvailability.setText(String.valueOf(bookDto.getQuantity()));
+        lblAuthor.setText(bookDto.getAuthor());
 
     }
 

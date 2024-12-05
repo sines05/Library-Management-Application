@@ -12,7 +12,7 @@
         <JFXButton layoutX="-48.0" layoutY="2.0" text=" " />
         <Pane layoutX="-0.39999999999997726" prefHeight="575.0" prefWidth="469.0" style="-fx-background-color: #FFEC8B; -fx-background-radius: 0 40 40 0;">
             <children>
-                <ImageView fitHeight="157.41" fitWidth="264.38" layoutX="106.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="157.41" fitWidth="264.38" layoutX="149.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../assests/img/login1.png" />
                     </image>

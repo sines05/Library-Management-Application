@@ -20,7 +20,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class UserDashboardFormController {
+public class UserDashboardFormController implements Initializable {
 
     @FXML
     private Pane availableBookPane;
@@ -101,16 +101,16 @@ public class UserDashboardFormController {
         pieChart = new PieChart(pieChartData); /* Create a pie chart with the data */
 
         pieChart.getData().get(0).getNode().setStyle(
-                "-fx-pie-color: #FFEB8C;" +
+                "-fx-pie-color:#151619 ;" +
                         "-fx-border-color: transaparent");
         pieChart.getData().get(1).getNode().setStyle(
-                "-fx-pie-color: #151619;" +
+                "-fx-pie-color: #FFEB8C;" +
                         "-fx-border-color: transaparent");
         pieChart.setLabelLineLength(0);
         pieChart.setLabelsVisible(false);
         pieChart.setLegendVisible(false);
         pieChart.setClockwise(true);
-        pieChart.setPrefSize(630, 630);
+        pieChart.setPrefSize(350, 350);
 
         pieChartPane.getChildren().add(pieChart);
     }
@@ -136,4 +136,8 @@ public class UserDashboardFormController {
         );
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        setPieChart();
+    }
 }

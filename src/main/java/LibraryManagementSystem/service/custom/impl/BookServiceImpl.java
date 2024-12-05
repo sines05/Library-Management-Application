@@ -84,7 +84,13 @@ public class BookServiceImpl implements BookService {
             BookRepositoryImpl.setSession(session);
 
             // Thay thế phương thức update() bằng merge() để tránh lỗi liên quan đến session
-            session.merge(book);  // Gọi merge() thay vì update()
+            Book existingBook = session.find(Book.class, book.getId());
+            if (existingBook != null) {
+                existingBook.setQuantity(book.getQuantity());
+                existingBook.setStatus(book.getStatus());
+                session.merge(existingBook); // Or merge, depending on your needs
+            }
+            // Gọi merge() thay vì update()
 
             // Commit transaction nếu không có lỗi
             transaction.commit();

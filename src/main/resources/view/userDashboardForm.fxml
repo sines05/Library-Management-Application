@@ -39,7 +39,6 @@
                 </JFXButton>
             </children>
         </Pane>
-        <Circle fill="#ffeb8c" layoutX="822.0" layoutY="182.0" radius="157.0" stroke="#ffeb8c" strokeType="INSIDE" />
         <Pane layoutX="39.0" layoutY="333.0" prefHeight="241.0" prefWidth="609.0" style="-fx-background-color: white; -fx-background-radius: 12;">
             <children>
                 <Text fx:id="textQuote" layoutX="82.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Reading opens the door to personal growth, shaping character and paving the way to excellence with every page turned.&quot;" wrappingWidth="426.9999999999998">
@@ -126,5 +125,13 @@
                 <Image url="@../assests/img/login1.png" />
             </image>
         </ImageView>
+        <Pane fx:id="pieChartPane" layoutX="655.0" layoutY="21.0" prefHeight="327.0" prefWidth="344.0">
+            <children>
+                <PieChart fx:id="pieChart" prefHeight="333.0" prefWidth="335.0">
+                    <cursor>
+                        <Cursor fx:constant="WAIT" />
+                    </cursor>
+                </PieChart>
+            </children></Pane>
     </children>
 </Pane>

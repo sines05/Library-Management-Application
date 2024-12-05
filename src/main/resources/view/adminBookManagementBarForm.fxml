@@ -23,12 +23,12 @@
             <Font size="11.0" />
          </font>
       </Label>
-      <Label fx:id="lblLanguage" layoutX="490.0" layoutY="9.0" prefHeight="25.0" prefWidth="22.0" text="English">
+      <Label fx:id="lblLanguage" layoutX="460.0" layoutY="9.0" prefHeight="25.0" prefWidth="22.0" text="English">
          <font>
             <Font size="11.0" />
          </font>
       </Label>
-      <Label fx:id="lblAvailability" layoutX="553.0" layoutY="9.0" prefHeight="25.0" prefWidth="88.0" text="Available">
+      <Label fx:id="lblAvailability" layoutX="580.0" layoutY="9.0" prefHeight="25.0" prefWidth="88.0" text="Available">
          <font>
             <Font size="11.0" />
          </font>
