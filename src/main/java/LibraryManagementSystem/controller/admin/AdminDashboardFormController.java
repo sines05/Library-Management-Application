@@ -112,7 +112,7 @@ public class AdminDashboardFormController implements Initializable {
         pieChart.setLabelsVisible(false);
         pieChart.setLegendVisible(false);
         pieChart.setClockwise(true);
-        pieChart.setPrefSize(300, 300);
+        pieChart.setPrefSize(350, 350);
 
         pieChartPane.getChildren().add(pieChart);
     }

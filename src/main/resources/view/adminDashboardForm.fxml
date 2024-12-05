@@ -150,7 +150,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="pieChartPane" layoutX="39.0" layoutY="36.0" prefHeight="130" prefWidth="130">
+      <Pane fx:id="pieChartPane" layoutX="25.0" layoutY="36.0" prefHeight="130" prefWidth="130">
          <PieChart fx:id="pieChart" layoutX="18.0" layoutY="15.0" prefHeight="130" prefWidth="130"/>
       </Pane>
       </children>
