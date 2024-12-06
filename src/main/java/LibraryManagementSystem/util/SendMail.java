@@ -29,14 +29,14 @@ public class SendMail {
         newSession = Session.getInstance(properties, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(
-                        "bookwormlibrarynetwork@gmail.com", "rjno qiip lrki jjxn");
+                        "sonnguyenque5@gmail.com", "qswu lybd njud ixfy");
             }
         });
     }
 
     public static MimeMessage draftEmail(String[] detail) throws MessagingException {
 
-        mimeMessage.setFrom(new InternetAddress("bookwormlibrarynetwork@gmail.com"));
+        mimeMessage.setFrom(new InternetAddress("sonnguyenque5@gmail.com"));
         String recipients = detail[0];
         String subject = detail[1];
         String body = detail[2];
