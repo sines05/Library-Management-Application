@@ -26,6 +26,9 @@ public class UserBorrowBookConfirmPopUpBarFormController {
     @FXML
     private Label lblType;
 
+    @FXML
+    private Label lblAuthor;
+
     BookDto bookDto;
 
     BookService bookService =
@@ -55,6 +58,7 @@ public class UserBorrowBookConfirmPopUpBarFormController {
         lblName.setText(bookDto.getName());
         lblType.setText(bookDto.getType());
         lblLanguage.setText(bookDto.getLanguage());
+        lblAuthor.setText(bookDto.getAuthor());
     }
 
 }

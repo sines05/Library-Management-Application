@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane prefHeight="68.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.user.UserBorrowBookConfirmPopUpBarFormController">
+<Pane prefHeight="68.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.user.UserBorrowBookConfirmPopUpBarFormController">
     <children>
-        <Label fx:id="lblId" layoutX="47.0" layoutY="23.0" text="1">
+        <Label fx:id="lblId" layoutX="28.0" layoutY="23.0" text="1">
             <font>
-                <Font size="16.0" />
+                <Font size="14.0" />
             </font>
         </Label>
-        <Label fx:id="lblName" layoutX="130.0" layoutY="23.0" prefHeight="25.0" prefWidth="122.0" text="Hibernate-Core">
+        <Label fx:id="lblName" alignment="CENTER" layoutX="100.0" layoutY="22.0" prefHeight="25.0" prefWidth="250.0" text="doraemon">
             <font>
-                <Font size="16.0" />
+                <Font size="13.0" />
             </font>
         </Label>
-        <Label fx:id="lblType" layoutX="345.0" layoutY="23.0" prefHeight="25.0" prefWidth="115.0" text="Educational">
+        <Label fx:id="lblType" alignment="CENTER" layoutX="340.0" layoutY="22.0" prefHeight="25.0" prefWidth="205.0" text="Educational">
             <font>
-                <Font size="16.0" />
+                <Font size="13.0" />
             </font>
         </Label>
-        <Label fx:id="lblLanguage" layoutX="563.0" layoutY="23.0" prefHeight="25.0" prefWidth="77.0" text="English">
+        <Label fx:id="lblLanguage" layoutX="618.0" layoutY="23.0" prefHeight="25.0" prefWidth="17.0" text="vi">
             <font>
-                <Font size="16.0" />
+                <Font size="13.0" />
             </font>
         </Label>
-        <ImageView fx:id="imgDelete" fitHeight="24.0" fitWidth="24.0" layoutX="732.0" layoutY="22.0" onMouseClicked="#imgDeleteOnMouseClicked" onMouseEntered="#imgDeleteOnMouseEntered" onMouseExited="#imgDeleteOnMouseExited" pickOnBounds="true" preserveRatio="true">
+        <Label fx:id="lblAuthor" alignment="CENTER" layoutX="700.0" layoutY="23.0" prefHeight="25.0" prefWidth="160.0" text="nam cao">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="imgDelete" fitHeight="24.0" fitWidth="24.0" layoutX="878.0" layoutY="20.0" onMouseClicked="#imgDeleteOnMouseClicked" onMouseEntered="#imgDeleteOnMouseEntered" onMouseExited="#imgDeleteOnMouseExited" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../assests/icon/deleteIconBlack.png" />
             </image>
