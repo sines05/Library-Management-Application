@@ -9,14 +9,14 @@
 
 <AnchorPane prefHeight="709.0" prefWidth="1218.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LibraryManagementSystem.controller.admin.AdminGlobalFormController">
     <children>
-        <Pane layoutY="-3.0" prefHeight="719.0" prefWidth="225.0" style="-fx-background-color: #FFEC8B;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-3.0">
+        <Pane layoutY="-3.0" prefHeight="726.0" prefWidth="225.0" style="-fx-background-color: #FFEC8B;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-3.0">
             <children>
                 <ImageView fitHeight="90.73" fitWidth="152.38" layoutX="57.0" layoutY="35.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../assests/img/BEE 2.png" />
                     </image>
                 </ImageView>
-                <Pane fx:id="catalogPane" layoutY="226.0" prefHeight="48.0" prefWidth="222.7" >
+                <Pane fx:id="catalogPane" layoutY="226.0" prefHeight="48.0" prefWidth="222.7">
                     <children>
                         <Label fx:id="lblCatalog" layoutX="85.0" layoutY="15.0" text="Catalog" textFill="black">
                             <font>
@@ -29,7 +29,7 @@
                             </image>
                         </ImageView>
                     </children></Pane>
-                <Pane fx:id="dashboardPane" layoutY="158.0" prefHeight="48.0" prefWidth="222.7" >
+                <Pane fx:id="dashboardPane" layoutY="158.0" prefHeight="48.0" prefWidth="222.7">
                     <children>
                         <Label fx:id="lblDashboard" layoutX="85.0" layoutY="15.0" text="Dashboard" textFill="black">
                             <font>
@@ -43,7 +43,7 @@
                         </ImageView>
                     </children>
                 </Pane>
-                <Pane fx:id="booksPane" layoutY="294.0" prefHeight="48.0" prefWidth="222.7" >
+                <Pane fx:id="booksPane" layoutY="294.0" prefHeight="48.0" prefWidth="222.7">
                     <children>
                         <Label fx:id="lblBooks" layoutX="85.0" layoutY="15.0" text="Books" textFill="black">
                             <font>
@@ -56,7 +56,7 @@
                             </image>
                         </ImageView>
                     </children></Pane>
-                <Pane fx:id="usersPane" layoutY="362.0" prefHeight="48.0" prefWidth="222.7" >
+                <Pane fx:id="usersPane" layoutY="362.0" prefHeight="48.0" prefWidth="222.7">
                     <children>
                         <Label fx:id="lblUsers" layoutX="85.0" layoutY="15.0" text="Users" textFill="black">
                             <font>
@@ -69,7 +69,7 @@
                             </image>
                         </ImageView>
                     </children></Pane>
-                <Pane fx:id="branchesPane" layoutY="430.0" prefHeight="48.0" prefWidth="222.7" >
+                <Pane fx:id="branchesPane" layoutY="430.0" prefHeight="48.0" prefWidth="222.7">
                     <children>
                         <Label fx:id="lblBranches" layoutX="85.0" layoutY="15.0" text="Branches" textFill="black">
                             <font>
@@ -82,7 +82,7 @@
                             </image>
                         </ImageView>
                     </children></Pane>
-                <Pane fx:id="logOutPane" layoutX="-3.0" layoutY="501.0" prefHeight="48.0" prefWidth="222.7" >
+                <Pane fx:id="logOutPane" layoutX="-3.0" layoutY="501.0" prefHeight="48.0" prefWidth="222.7">
                     <children>
                         <Label fx:id="lblLogOut" layoutX="85.0" layoutY="15.0" text="Log Out" textFill="black">
                             <font>
@@ -129,7 +129,7 @@
             </children>
         </Pane>
         <Pane fx:id="pagingPane" layoutX="225.0" layoutY="68.0" prefHeight="645.0" prefWidth="1009.0" visible="false" />
-        <ImageView fx:id="imgTransparent" fitHeight="704.0" fitWidth="1237.0" pickOnBounds="true" preserveRatio="true" visible="false">
+        <ImageView fx:id="imgTransparent" fitHeight="726.0" fitWidth="1321.0" pickOnBounds="true" preserveRatio="true" visible="false">
             <image>
                 <Image url="@../assests/img/transparentImage.png" />
             </image>
@@ -140,7 +140,7 @@
             </image>
         </ImageView>
         <JFXButton layoutX="1150.0" layoutY="16.0" minHeight="40.0" onAction="#btnSettingsOnAction" prefWidth="40.0" style="-fx-background-radius: 12;" text=" " />
-        <Pane fx:id="popUpPane" layoutX="600.0" layoutY="218.0" prefHeight="491.0" prefWidth="627.0" style="-fx-background-radius: 10;" visible="false" />
+        <Pane fx:id="popUpPane" layoutX="400.0" layoutY="160.0" prefHeight="491.0" prefWidth="627.0" style="-fx-background-radius: 10;" visible="false" />
         <Pane fx:id="popUpLargePane" layoutX="428.0" layoutY="112.0" prefHeight="459.0" prefWidth="642.0" style="-fx-background-radius: 10;" visible="false" />
         <Pane fx:id="settingsPane" layoutX="900.0" layoutY="82.0" prefHeight="140.0" prefWidth="282.0" visible="false" />
         <JFXButton layoutY="362.0" minHeight="48.0" onAction="#btnUsersOnAction" onMouseEntered="#btnUsersOnMouseEntered" onMouseExited="#btnUsersOnMouseExited" prefWidth="222.7" text=" " />
