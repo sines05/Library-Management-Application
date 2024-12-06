@@ -70,7 +70,7 @@ public class UserDeleteConfirmationFormController {
     private void sendMail() {
         try {
             String email = UserSignInFormController.user.getEmail();
-            String subject = "Your BookWorm Account has been Deleted!";
+            String subject = "Your Library Account has been Deleted!";
             String body = "Dear "+ UserSignInFormController.user.getName() +",\n" +
                     "We acknowledge that you have initiated the deletion of your account.\n" +
                     "If you have any further inquiries or require assistance, please feel free to reach out to us.\n" +
@@ -78,7 +78,7 @@ public class UserDeleteConfirmationFormController {
                     "Thank you.\n" +
                     "\n" +
                     "Kind regards,\n" +
-                    "BookWorm Library Management";
+                    "Library Management";
 
             String[] detail = {email, subject, body};
             SendMail.sendMail(detail);
